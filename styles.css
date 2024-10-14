@@ -1,0 +1,384 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #00FFD5;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 100px; /* Corrected duplicate padding-top */
+}
+
+/* Header Adjustments */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Centering logo and nav items */
+    justify-content: space-between;
+    background: var(--bg-color);
+    padding: 10px 12%; /* Reduced padding */
+    height: 70px; /* Set explicit height for the header */
+    transition: all 0.5s ease;
+
+}
+
+/* Navbar adjustments for alignment */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 60%;
+}
+
+.navbar a {
+    position: relative;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: transform 0.3s; /* Optional: to make the transformation smoother */
+}
+
+ul.navbar li a {
+color: #00FFD5;
+}
+
+.navbar li:hover {
+    transform: translate(10px, 10px); /* animation on hover */
+    transition: transform 0.3s;
+}
+
+
+
+
+
+.navbar a::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.navbar a::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.navbar a:hover::before {
+    opacity: 1;
+}
+
+.navbar a:active::after {
+    background: transparent;
+}
+
+.navbar a:active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
+/* Center logo and make responsive */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/*Logo*/
+
+.logo span {
+    margin-top: 3px;
+    position: relative;
+    color: var(--main-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.logo span::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.logo span::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.logo span:hover{
+    transform: translate(10px, 10px); /* animation on hover */
+    transition: transform 0.3s;
+}
+
+.logo span:hover::before {
+    opacity: 1;
+}
+
+.logo span:active::after {
+    background: transparent;
+}
+
+.logo span:active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/*Logo Text*/
+
+.logo i {
+    font-size: 3rem;
+    color: #00FFD5;
+}
+
+.logo i:hover{
+    transform: translate(10px, 10px); /* animation on hover */
+    transition: transform 0.3s;
+}
+
+
+
+/*Get in touch button*/
+
+.btn {
+    margin: 100px;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color);
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    transition: transform 0.3s; /* Optional: to make the transformation smoother */
+}
+
+.btn:hover {
+    transform: translate(10px, 10px); /* Only on hover */
+}
+
+.btn a {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.btn::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:active::after {
+    background: transparent;
+}
+
+.btn:active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* Hamburger icon */
+#menu-icon {
+    font-size: 45px; /* Adjusted size for mobile */
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+/* For mobile view */
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;/* Display hamburger icon */
+    
+    }
+    #menu-icon.bx.bx-menu {
+    margin-right: 15px;
+    }
+
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: auto;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+
+    .navbar.open {
+        right: 2%; /* Show navbar on mobile when open */
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: all 0.5s ease;
+    }
+
+    .navbar a:hover {
+        color: #222327;
+        transform: translateY(5px); /* Animation effect */
+    }
+
+    /* Adjust the logo and button for mobile */
+    .logo {
+        display: flex;
+        align-items: center;
+        flex-direction: row; /* Keep the icon and text horizontally aligned */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .logo i {
+        font-size: 30px;
+        margin-right: 10px; /* Space between icon and text */
+        color: #00FFD5;
+    }
+
+    .logo span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-color);
+        white-space: nowrap; /* Ensure George Leslie stays on one line */
+    }
+
+    .main {
+        margin-right: 15px;
+    }
+
+    .btn {
+        margin-left: 20px;
+    }
+
+    .btn a {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #00FFD5;
+        white-space: nowrap;
+    }
+
+    ul.navbar.open {
+        background-color: #444;
+    }
+
+    ul.navbar.open a {
+        color: var(--main-color);
+    }
+}
+
+header{
+    margin-right: 20px;
+}
+
