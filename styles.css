@@ -18,7 +18,7 @@ body {
     min-height: 100vh;
     background: var(--bg-color);
     color: var(--text-color);
-    padding-top: 100px; /* Corrected duplicate padding-top */
+    padding-top: 100px; 
 }
 
 /* Header Adjustments */
@@ -32,14 +32,19 @@ header {
     align-items: center; /* Centering logo and nav items */
     justify-content: space-between;
     background: var(--bg-color);
-    padding: 10px 12%; /* Reduced padding */
+    padding: 10px 12%;
     height: 70px; /* Set explicit height for the header */
     transition: all 0.5s ease;
 
 }
 
+
+
+
+
 /* Navbar adjustments for alignment */
 .navbar {
+    padding: 10px 10px;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -51,9 +56,9 @@ header {
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
-    padding: 5px 0;
+    padding: 5px 15px;
     margin: 0 30px;
-    transition: transform 0.3s; /* Optional: to make the transformation smoother */
+    transition: transform 0.3s; /* to make the transformation smoother */
 }
 
 ul.navbar li a {
@@ -61,13 +66,10 @@ color: #00FFD5;
 }
 
 .navbar li:hover {
+
     transform: translate(10px, 10px); /* animation on hover */
     transition: transform 0.3s;
 }
-
-
-
-
 
 .navbar a::after {
     content: "";
@@ -75,10 +77,11 @@ color: #00FFD5;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: var(--bg-color);
     left: 0;
     top: 0;
     border-radius: 10px;
+    background-color: var(--bg-color);
 }
 
 .navbar a::before {
@@ -111,9 +114,14 @@ color: #00FFD5;
 }
 
 .navbar a:active {
-    color: #000;
+    color: var(--main-color);
     font-weight: bold;
 }
+
+
+
+
+
 
 
 
@@ -129,9 +137,10 @@ color: #00FFD5;
     margin-right: 10px;
 }
 
-/*Logo*/
+/*Logo Text*/
 
 .logo span {
+    padding: 10px 0px;
     margin-top: 3px;
     position: relative;
     color: var(--main-color);
@@ -145,7 +154,7 @@ color: #00FFD5;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: var(--bg-color);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -186,12 +195,17 @@ color: #00FFD5;
 }
 
 .logo span:active {
-    color: #000;
+    color: var(--main-color); /*changes color of logo text when clicked*/ 
     font-weight: bold;
 }
 
 
-/*Logo Text*/
+
+
+
+
+
+/*Logo Home*/
 
 .logo i {
     font-size: 3rem;
@@ -202,6 +216,12 @@ color: #00FFD5;
     transform: translate(10px, 10px); /* animation on hover */
     transition: transform 0.3s;
 }
+
+
+
+
+
+
 
 
 
@@ -218,7 +238,7 @@ color: #00FFD5;
     position: relative;
     z-index: 0;
     border-radius: 12px;
-    transition: transform 0.3s; /* Optional: to make the transformation smoother */
+    transition: transform 0.3s; /*to make the transformation smoother */
 }
 
 .btn:hover {
