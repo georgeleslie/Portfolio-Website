@@ -389,18 +389,19 @@ color: #00FFD5;
     }
 
     .logo span {
-        display: none;
-        /* Ensure George Leslie stays on one line */
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-color);
+        white-space: nowrap; /* Ensure George Leslie stays on one line */
     }
 
 
 
-
-/*adjust button for mobile*/
-    .btn {
-        
-        padding: 2px 5px;
-    }
+.btn {
+    
+    padding: 2px 5px;
+    margin-left: 20px;
+}
 
     .btn a {
         font-size: 0.7rem;
