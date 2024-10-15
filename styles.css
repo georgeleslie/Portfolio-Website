@@ -314,27 +314,20 @@ color: #00FFD5;
 
 /*MOBILE VIEW*/
 @media (max-width: 1090px) {
-     header{
+    header {
         margin-right: 20px;
     }
     
-    
-
-
-/*Hamburger*/
+    /*Hamburger*/
     #menu-icon {
-        display: block;/* Display hamburger icon */
-    
+        display: block; /* Display hamburger icon */
     }
 
     #menu-icon.bx.bx-menu {
         margin-right: 15px;
     }
-    
 
-
-
-/*hamburger menu*/
+    /*hamburger menu*/
     .navbar {
         position: absolute;
         top: 100%;
@@ -351,7 +344,6 @@ color: #00FFD5;
 
     .navbar.open {
         left: 2%; /* Show navbar on mobile when open */
-    
     }
 
     .navbar a {
@@ -368,13 +360,8 @@ color: #00FFD5;
     ul.navbar.open a {
         color: var(--main-color);
     }
-}
 
-   
-
-
-
- /* Adjust the logo for mobile */
+    /* Adjust the logo for mobile */
     .logo {
         display: flex;
         align-items: center;
@@ -395,13 +382,10 @@ color: #00FFD5;
         white-space: nowrap; /* Ensure George Leslie stays on one line */
     }
 
-
-
-.btn {
-    
-    padding: 2px 5px;
-    margin-left: 20px;
-}
+    .btn {
+        padding: 2px 5px;
+        margin-left: 20px;
+    }
 
     .btn a {
         font-size: 0.7rem;
@@ -409,7 +393,41 @@ color: #00FFD5;
         color: #00FFD5;
         white-space: nowrap;
     }
+}
 
+/* DESKTOP VIEW */
+@media (min-width: 1091px) {
+    .logo{
 
+       
+        border-radius: 10px;
+        
+    }
+    .logo i {
+        font-size: 40px; /* Adjust icon size for desktop */
+        margin-left: 10px; /* Smaller margin for desktop */
+        color: var(--main-color); /* Use the default text color */
+    }
+
+    .logo span {
+        font-size: 1.2rem; /* Larger font size for desktop */
+        font-weight: 700;
+        color: var(--text-color);
+        padding: 10px 10px;
+    }
+
+    .btn {
+        padding: 5px 10px; /* Larger padding for desktop buttons */
+        margin-left: 10px;
+    
+    }
+
+    .btn a {
+        font-size: 1rem; /* Adjust font size for desktop */
+        font-weight: 700;
+        color: var(--main-color);
+        padding: 5px 2px;
+    }
+}
 
 
