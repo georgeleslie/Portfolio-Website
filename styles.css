@@ -1,4 +1,5 @@
 
+
 * {
     margin: 0;
     padding: 0;
@@ -371,10 +372,13 @@ color: #00FFD5;
 
     .logo i {
         font-size: 30px;
-        margin-left: 20px; /* Space between icon and text */
+         /* Space between icon and text */
         color: #00FFD5;
     }
 
+    a.logo {
+        margin-left: 20px;
+    }
     .logo span {
         font-size: 0.9rem;
         font-weight: 600;
@@ -398,8 +402,6 @@ color: #00FFD5;
 /* DESKTOP VIEW */
 @media (min-width: 1091px) {
     .logo{
-
-       
         border-radius: 10px;
         
     }
@@ -431,3 +433,255 @@ color: #00FFD5;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-screen Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    background: var(--bg-color);
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 0; /* Remove margin to avoid overlap */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/* Hero Button - Now as a button element */
+.hero-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--main-color);
+    background: var(--main-color);
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+    border: none; /* Remove default button border */
+    outline: none; /* Remove default button outline */
+}
+
+.hero-btn:hover {
+    background: #000000; /* Slightly darker shade on hover */
+}
+
+.hero-btn:active {
+    transform: translate(10px, 10px);
+    color: var(--main-color); /* Movement on active/click */
+}
+
+/* Glowing Effect (before and after pseudo-elements) */
+.hero-btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.hero-btn::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.hero-btn:hover::before {
+    opacity: 1; /* Make the glowing effect visible on hover */
+}
+
+.hero-btn:active::after {
+    background: transparent;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+
+
+
+
+
+
+
+/* Main Section */
+main {
+    padding: 50px 12%;
+    background: grey;
+    color: var(--text-color);
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.projects {
+    margin-top: 50px;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Footer Section */
+.footer {
+    background: var(--bg-color);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #444; /* Slight border to separate the footer */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.social-link i {
+    margin-right: 8px;
+}
+
+.social-link:hover {
+    color: #00c4a6;
+}
+
+
+
+
+
+
+
+  /* Mobile View Tweaks */
+@media (max-width: 1090px) {
+    .hero {
+        height: 100vh; /* Ensure full viewport height on mobile */
+        padding-top: 0; /* Remove extra padding */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    .hero-btn {
+        padding: 10px 20px; /* Slightly smaller button for mobile */
+        font-size: 0.9rem;
+    }
+}
