@@ -1,0 +1,9 @@
+// Selecting the hamburger icon and navbar
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+// Toggling the 'bx-x' class for changing the icon and 'open' class for sliding the menu
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');  // Adds/removes the cross icon
+    navbar.classList.toggle('open');  // Opens/closes the navbar
+};

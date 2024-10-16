@@ -1,4 +1,5 @@
-let menu = document.querySelector('#menu-icon');
+// Declare `menu` and `navbar`
+let menu = document.querySelector('#icon-hamburger');
 let navbar = document.querySelector('.navbar');
 let dropdowns = document.querySelectorAll('.dropdown');
 
