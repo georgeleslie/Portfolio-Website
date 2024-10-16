@@ -735,10 +735,10 @@ main {
 
     /* Additional Adjustments */
     .section_pic-container {
-        margin-left: 75px;
-        padding-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
     }
-
     .social-links {
         padding-bottom: 100px;
     }
@@ -808,4 +808,46 @@ main {
         margin-right: auto;
         padding-top: 70px;
     }
+}
+
+/* Parent container for social links */
+.social-link {
+    margin-top: 40px;
+    display: flex;             /* Flexbox to align items */
+    justify-content: center;    /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    gap: 15px;                  /* Space between each link */
+}
+
+/* Individual social links */
+a.social-link {
+    margin-bottom: 20px;
+    display: flex;              /* Flexbox to align icon and text */
+    align-items: center;        /* Align icon and text vertically */
+    text-decoration: none;      /* Remove underline */
+    font-size: 1.2rem;          /* Adjust font size for better visibility */
+    color: var(--main-color);   /* Your desired text color */
+}
+
+/* Hover effect */
+a.social-link:hover {
+    color: #00c4a6;             /* Change color on hover */
+}
+
+.social-link-git-hero {    /* Align icon and text vertically */
+    text-decoration: none;     /* Remove underline */
+    font-size: 1.2rem;          /* Adjust font size for better visibility */
+    color: var(--main-color);
+     
+}
+
+.social-link-git-hero span {
+    margin-right: 15px; /* Adjust this value to move the text closer to the icon */
+}
+
+i.fab.fa-linkedin {
+    margin: 0;
+}
+i.fab.fa-github{
+    margin-right: 8px;
 }
