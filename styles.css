@@ -567,7 +567,7 @@ color: #00FFD5;
 /* Main Section */
 main {
     padding: 50px 12%;
-    background: grey;
+    background: rgb(0, 0, 0);
     color: var(--text-color);
 }
 
@@ -578,11 +578,12 @@ main {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    
 }
 
 .about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .projects {
@@ -663,7 +664,7 @@ main {
 @media (max-width: 1090px) {
     /* Header and Navbar */
     header {
-        margin-right: 20px;
+        background-color: #000000;
     }
 
     /* Hamburger Menu Icon */
@@ -721,10 +722,11 @@ main {
 
     a.logo {
         margin-left: 20px;
+        background-color: #000;
     }
 
     .logo span {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         font-weight: 600;
         color: var(--text-color);
     }
@@ -759,8 +761,7 @@ main {
     }
 
     .hero-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 10px 10px;
     }
 
     .section_pic-container {
@@ -816,7 +817,7 @@ main {
 }
 
 .hero h1 {
-    font-size: 2.5rem; /* Larger font size for emphasis */
+    font-size: 2rem; /* Larger font size for emphasis */
     margin-bottom: 15px;
 }
 
