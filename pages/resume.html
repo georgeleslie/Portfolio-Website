@@ -22,6 +22,7 @@
     
     <!-- Styles and Fonts -->
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +42,6 @@
     <a href="/index.html" class="logo"><i class="ri-home-2-fill"></i><span>George Leslie</span></a>
 
     <ul class="navbar">
-        <li><a href="/index.html">Home</a></li>
         <li><a href="/pages/about.html">About</a></li>
         <li><a href="/pages/projects.html">Projects</a></li>
         <li><a href="/pages/blog.html">Blog</a></li>
@@ -53,11 +53,122 @@
     </div>
 </header>
 
-<!-- Resume Section -->
-<section class="resume">
-    <h1>My Resume</h1>
-    <p>Download my resume <a href="/assets/George_Leslie_2024_CV.pdf" target="_blank">here</a>.</p>
-</section>
+
+
+
+
+
+
+
+
+
+<!-- Main Section: About -->
+<main class="aboutmain">
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I've always felt a pull towards the online world, and recently, life has nudged me to embrace it fully. Over the past month,
+            I've immersed myself in learning Git, the foundations of web development, Python, Linux, and a bit of networking, including IP addressing, subnetting, and TCP/IP.            
+            I believe that traditional jobs might not be my calling; instead, I see my future in building online businesses from the ground up.
+            This journey not only allows me to explore my passion for web development but also equips me with the skills needed for a potential career as a DevOps engineer.
+            My goal is to create websites that are functional, aesthetically pleasing, and effective in meeting user needs. 
+            I'm excited about the endless possibilities that lie ahead as I continue to grow in this ever-evolving field.
+        </p>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Description of the first project goes here.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Description of the second project goes here.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Main Section: Skills -->
+<main class="skillsmain">
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <p>
+            My skill set includes a variety of technologies and practices that are essential for successful web development and operations. 
+            I focus on continually expanding my knowledge and applying it effectively to create impactful digital solutions.
+        </p>
+        <div class="skills-card">
+            <h3>Skill 1</h3>
+            <p>Description of Skill 1 goes here.</p>
+        </div>
+        <div class="skills-card">
+            <h3>Skill 2</h3>
+            <p>Description of Skill 2 goes here.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Main Section: Blog -->
+<main class="blogmain">
+    <section class="blog" id="blog">
+        <h2>Blog</h2>
+        <p>
+            Welcome to my blog! Here, I share insights, experiences, and lessons learned on my journey in web development and beyond.
+        </p>
+        <div class="blog-card">
+            <h3>Blog Post 1</h3>
+            <p>Description of the first blog post goes here.</p>
+        </div>
+        <div class="blog-card">
+            <h3>Blog Post 2</h3>
+            <p>Description of the second blog post goes here.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Main Section: Resume -->
+<main class="resumemain">
+    <section class="resume" id="resume">
+        <h2>Resume</h2>
+        <p>
+            This is the section where you can describe your professional experience and skills.
+        </p>
+        <div class="resume-card">
+            <h3>Experience 1</h3>
+            <p>Description of experience 1 goes here.</p>
+        </div>
+        <div class="resume-card">
+            <h3>Experience 2</h3>
+            <p>Description of experience 2 goes here.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Main Section: Contact -->
+<main class="contactmain">
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            Feel free to reach out to me via the contact form below or through my social media links.
+        </p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
+
+
+
+
+
+
+
 
 <!-- Footer Section -->
 <footer class="footer">

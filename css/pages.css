@@ -1,0 +1,69 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Base font for the whole site */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Main Section Styles */
+.aboutmain, .skills, .projectsmain, .blogmain, .resumemain, .contactmain {
+    padding: 50px 12%;
+    margin-top: 100px; /* Padding around each section */
+    color: var(--text-color); /* Text color for all sections */
+    background: rgb(0, 0, 0); /* Default background color */
+}
+
+.skills {
+    background: var(--bg-color); /* Specific background for skills */
+}
+
+.resumemain {
+    background: var(--bg-color); /* Specific background for resume */
+}
+
+/* Heading Styles */
+h1, h2 {
+    text-align: center; /* Center-align headings */
+    color: var(--main-color); /* Color for headings */
+}
+
+h1 {
+    font-size: 2.5rem; /* Size for main section heading */
+    margin-bottom: 20px; /* Space below main heading */
+}
+
+h2 {
+    font-size: 2rem; /* Size for subsection headings */
+    margin-bottom: 10px; /* Space below subsection headings */
+}
+
+/* Category Styles */
+.category {
+    margin-bottom: 30px; /* Spacing between categories */
+}
+
+.category ul {
+    list-style-type: none; /* Remove default list styles */
+    padding-left: 0; /* Remove default padding */
+}
+
+.category li {
+    font-size: 1rem; /* Font size for list items */
+    line-height: 1.5; /* Line height for readability */
+    text-align: left; /* Align text to the left */
+}
+
+/* Additional Styles */
+.category {
+    padding: 20px; /* Padding inside each category */
+    border: 1px solid #ccc; /* Border around category */
+    border-radius: 10px; /* Rounded corners */
+    background: #222; /* Background for category */
+    transition: background 0.3s; /* Transition for hover effects */
+}
+
+.category:hover {
+    background: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+/* Contact

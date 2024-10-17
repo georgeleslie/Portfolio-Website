@@ -220,10 +220,6 @@ color: #00FFD5;
     font-weight: bold;
 }
 
-
-
-
-
 /*Get in touch button*/
 
 .btn {
@@ -299,9 +295,6 @@ color: #00FFD5;
 
 
 
-
-
-
 /* Hamburger icon */
 #icon-hamburger {
     font-size: 45px; /* Adjusted size for mobile */
@@ -310,29 +303,6 @@ color: #00FFD5;
     display: none;
     position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Hero Section */
@@ -428,9 +398,6 @@ color: #00FFD5;
 }
 
 
-
-
-
 .section_pic-container {
     flex: 1 1 30%;
     max-width: 300px;
@@ -444,11 +411,6 @@ color: #00FFD5;
     border-radius: 50%; /* Rounded image for profile picture */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow to make the image stand out */
 }
-
-
-
-
-
 
 
 /* Social Links Main */
@@ -476,8 +438,6 @@ color: #00FFD5;
 .social-link i {
     margin-right: 8px;
 }
-
-
 
 
 /* Hero Button - Now as a button element */
@@ -564,48 +524,154 @@ color: #00FFD5;
 
 
 
+
+
+
+
+
+
+
 /* Main Section */
-main {
-    padding: 50px 12%;
-    background: rgb(0, 0, 0);
-    color: var(--text-color);
+.aboutmain, .skillsmain, .blogmain, .resumemain, .contactmain {
+    padding: 50px 12%; /* Padding around each section */
+    color: var(--text-color); /* Text color for all sections */
 }
 
-.about {
-    margin-bottom: 50px;
+/* Background color adjustments */
+.aboutmain {
+    background: rgb(0, 0, 0); /* Black background for About Me section */
 }
 
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    
+.skillsmain {
+    background: var(--bg-color); /* Variable background for Skills section */
 }
 
-.about p {
-    font-size: 1rem;
-    line-height: 1.5;
+.blogmain {
+    background: rgb(0, 0, 0); /* Black background for Blog section */
 }
 
-.projects {
-    margin-top: 50px;
+.resumemain {
+    background: var(--bg-color); /* Background for Resume section */
 }
 
-.projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.contactmain {
+    background: rgb(0, 0, 0); /* Black background for Contact section */
 }
 
-.project-card {
-    background: #333;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+/* Section Styling */
+.about, .skills, .blog, .resume, .contact {
+    margin-bottom: 50px; /* Spacing between sections */
 }
 
-.project-card:hover {
+/* Heading Styles */
+h2 {
+    font-size: 2.5rem; /* Size of the headings */
+    margin-bottom: 20px; /* Space below headings */
+    color: var(--main-color); /* Color for headings */
+    text-align: center; /* Center-align headings for a better look */
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1rem; /* Font size for paragraphs */
+    line-height: 1.5; /* Line height for readability */
+    text-align: justify; /* Justify text for a cleaner appearance */
+    margin-bottom: 20px; /* Space below paragraphs for better separation */
+}
+
+/* Additional margin for sections */
+.projects, .skills, .blog, .resume, .contact {
+    margin-top: 50px; /* Spacing before projects, skills, blog, resume, and contact sections */
+}
+
+/* Card Styles */
+.project-card, .skills-card, .blog-card, .resume-card {
+    background: #333; /* Default background for cards */
+    padding: 20px; /* Padding inside cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    margin-bottom: 20px; /* Space below each card */
+    transition: transform 0.3s ease, background 0.3s ease; /* Animation for hover effects */
+}
+
+/* Hover Effects for Cards */
+.project-card:hover, .skills-card:hover, .blog-card:hover, .resume-card:hover {
     transform: translateY(-10px); /* Lift effect on hover */
+    background: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
 }
+
+/* Specific Styles for Skills Section */
+.skills-card {
+    background: black; /* Background color for skills cards */
+}
+
+/* Specific Styles for Blog Section */
+.blog-card {
+    background: #ffffff; /* Background color for blog cards */
+}
+
+/* Specific Styles for Resume Section */
+.resume-card {
+    background: #ffffff; /* Background color for resume cards */
+}
+
+/* Contact Form Styles */
+.contact form {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.contact label {
+    margin-top: 10px; /* Space above labels */
+}
+
+.contact input, .contact textarea {
+    padding: 10px; /* Padding inside inputs and textarea */
+    margin-top: 5px; /* Space above inputs and textarea */
+    border: 1px solid #ccc; /* Border for inputs and textarea */
+    border-radius: 5px; /* Rounded corners for inputs and textarea */
+}
+
+.contact button {
+    margin-top: 10px; /* Space above button */
+    padding: 10px; /* Padding inside button */
+    background-color: var(--main-color); /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background 0.3s; /* Transition effect on hover */
+}
+
+.contact button:hover {
+    background-color: darken(var(--main-color), 10%); /* Darken background on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -620,7 +686,8 @@ main {
     background: var(--bg-color);
     padding: 20px 0;
     text-align: center;
-    border-top: 1px solid #444; /* Slight border to separate the footer */
+    border-top: 1px solid #444;
+    background-color: #000; /* Slight border to separate the footer */
 }
 
 .footer-content {
@@ -650,6 +717,27 @@ main {
 .social-link:hover {
     color: #00c4a6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
