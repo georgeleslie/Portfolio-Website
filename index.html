@@ -1,137 +1,209 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="This is George Leslie's personal profile, showcasing web development projects, skills, and experience.">
-        <meta name="keywords" content="George Leslie, web developer, portfolio, projects, web design, web development">
-        <meta name="author" content="George Leslie">
-    
-        <!-- Twitter Card (for social media sharing) -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="George Leslie | Web Developer">
-        <meta name="twitter:description" content="Explore George Leslie's web development projects and skills.">
-        <meta name="twitter:image" content="https://www.gdleslie.com/images/profile.jpg"> <!-- Your actual image URL -->
-    
-        <!-- Open Graph (for social media sharing) -->
-        <meta property="og:title" content="George Leslie | Web Developer">
-        <meta property="og:description" content="Explore George Leslie's web development projects and skills.">
-        <meta property="og:image" content="https://www.gdleslie.com/images/profile.jpg"> <!-- Your actual image URL -->
-        <meta property="og:url" content="https://www.gdleslie.com">
-        <meta property="og:type" content="website">
-    
-        <!-- Styles and Fonts -->
-        <link rel="stylesheet" href="/styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="icon" href="https://www.gdleslie.com/favicon.ico" type="image/x-icon">
-        
-        <!--Title-->
-        <title>George Leslie | Web Developer Portfolio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is George Leslie's personal profile, showcasing web development projects, skills, and experience.">
+    <meta name="keywords" content="George Leslie, web developer, portfolio, projects, web design, web development">
+    <meta name="author" content="George Leslie">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="George Leslie | Web Developer">
+    <meta name="twitter:description" content="Explore George Leslie's web development projects and skills.">
+    <meta name="twitter:image" content="https://www.gdleslie.com/images/profile.jpg">
 
-    </head>
+    <!-- Open Graph -->
+    <meta property="og:title" content="George Leslie | Web Developer">
+    <meta property="og:description" content="Explore George Leslie's web development projects and skills.">
+    <meta property="og:image" content="https://www.gdleslie.com/images/profile.jpg">
+    <meta property="og:url" content="https://www.gdleslie.com">
+    <meta property="og:type" content="website">
+
+    <!-- Styles and Fonts -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="https://www.gdleslie.com/favicon.ico" type="image/x-icon">
+
+    <title>George Leslie | Web Developer Portfolio</title>
+</head>
 <body>
-
-
-
-
-<!--Navigation Menu-->    
-<header>
-    <div class="bx bx-menu" id="icon-hamburger"></div>
-    <a href="/index.html" class="logo" alt="Profile picture of George Leslie"><i class="ri-home-2-fill"></i><span>George Leslie</span></a>
-
-    <ul class="navbar">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/pages/about.html">About</a></li>
-        <li><a href="/pages/projects.html">Projects</a></li>
-        <li><a href="/pages/skills.html">Skills</a></li>
-        <li><a href="/pages/blog.html">Blog</a></li>
-        <li><a href="/pages/resume.html">Resume</a></li>
-    </ul>
-
-    <div class="main">
-        <button class="btn"><a href="/pages/contact.html">Get In Touch</a></button>
-    </div>
-</header>
-
-
-
-
-
-<!-- Hero Section -->
-<section class="hero">
-
-    <div class="hero-inner">
-
-    <div class="section_pic-container">
-        <img src="images/headshot.png" alt="George Leslie profile picture">
-    </div>
-
-    <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Building high-quality websites with passion and precision.</p>
-            <button class="btn hero-btn" onclick="location.href='#projects'" title="View My Projects">View My Work</button>
-            <button class="btn hero-btn" onclick="window.open('./assets/GeorgeLeslie_2024_CV.pdf', '_blank')" title="Download My CV">Download My CV</button>
-        <a href="https://www.linkedin.com/in/george-leslie-/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
-            <i class="fab fa-linkedin"></i> LinkedIn 
+    <!-- Navigation Menu -->    
+    <header>
+        <div class="bx bx-menu" id="icon-hamburger"></div>
+        <a href="/index.html" class="logo" alt="Profile picture of George Leslie">
+            <i class="ri-home-2-fill"></i><span>George Leslie</span>
         </a>
 
-        <a href="https://github.com/georgeleslie" target="_blank" rel="noopener noreferrer" class="social-link-git-hero" aria-label="GitHub Profile">
-            <i class="fab fa-github"></i> <span>GitHub</span>
-        </a>
+        <ul class="navbar">
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
+            <li><a href="/pages/skills.html">Skills</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/pages/resume.html">Resume</a></li>
+        </ul>
 
-    </div>
+        <div class="main">
+            <button class="btn"><a href="/pages/contact.html">Get In Touch</a></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="section_pic-container">
+                <img src="images/headshot.png" alt="George Leslie profile picture">
+            </div>
+
+
+
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Building high-quality websites with passion and precision.</p>
+            
+                <!-- Flexbox container for the buttons -->
+                <div class="btn-container">
+                    <button class="btn hero-btn" onclick="location.href='#projects'" title="View My Projects">View My Work</button>
+                    <button class="btn hero-btn" onclick="window.open('./assets/GeorgeLeslie_2024_CV.pdf', '_blank')">Download My CV</button>
+                </div>
+            </div>
+
+
+            
+                <!-- Social Links Container -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/george-leslie-/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i> LinkedIn 
+                    </a>
+                    <a href="https://github.com/georgeleslie" target="_blank" rel="noopener noreferrer" class="social-link-git-hero" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i> <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section: About -->
+    <main class="aboutmain">
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                I've always felt a pull towards the online world, and recently, life has nudged me to embrace it fully. Over the past month,
+                I've immersed myself in learning Git, the foundations of web development, Python, Linux, and a bit of networking, including IP addressing, subnetting, and TCP/IP.            
+                I believe that traditional jobs might not be my calling; instead, I see my future in building online businesses from the ground up.
+                This journey not only allows me to explore my passion for web development but also equips me with the skills needed for a potential career as a DevOps engineer.
+                My goal is to create websites that are functional, aesthetically pleasing, and effective in meeting user needs. 
+                I'm excited about the endless possibilities that lie ahead as I continue to grow in this ever-evolving field.
+            </p>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of the first project goes here.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of the second project goes here.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Section: Skills -->
+    <main class="skillsmain">
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <p>
+                My skill set includes a variety of technologies and practices that are essential for successful web development and operations. 
+                I focus on continually expanding my knowledge and applying it effectively to create impactful digital solutions.
+            </p>
+            <div class="skills-card">
+                <h3>Skill 1</h3>
+                <p>Description of Skill 1 goes here.</p>
+            </div>
+            <div class="skills-card">
+                <h3>Skill 2</h3>
+                <p>Description of Skill 2 goes here.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Section: Blog -->
+    <main class="blogmain">
+        <section class="blog" id="blog">
+            <h2>Blog</h2>
+            <p>
+                Welcome to my blog! Here, I share insights, experiences, and lessons learned on my journey in web development and beyond.
+            </p>
+            <div class="blog-card">
+                <h3>Blog Post 1</h3>
+                <p>Description of the first blog post goes here.</p>
+            </div>
+            <div class="blog-card">
+                <h3>Blog Post 2</h3>
+                <p>Description of the second blog post goes here.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Section: Resume -->
+    <main class="resumemain">
+        <section class="resume" id="resume">
+            <h2>Resume</h2>
+            <p>
+                This is the section where you can describe your professional experience and skills.
+            </p>
+            <div class="resume-card">
+                <h3>Experience 1</h3>
+                <p>Description of experience 1 goes here.</p>
+            </div>
+            <div class="resume-card">
+                <h3>Experience 2</h3>
+                <p>Description of experience 2 goes here.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Section: Contact -->
+    <main class="contactmain">
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to reach out to me via the contact form below or through my social media links.
+            </p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 George Leslie</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/george-leslie-/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/georgeleslie" target="_blank" class="social-link-git-hero">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
     
-    </div>
-
-</section>
-
-
-<!-- Main Section -->
-<main>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>About Me
-            I've always felt a pull towards the online world, and recently, life has nudged me to embrace it fully. Over the past month,
-            I've immersed myself in learning Git, the foundations of web development, Python, Linux, and a bit of networking, including IP addressing, subnetting, and TCP/IP.            
-            I believe that traditional jobs might not be my calling; instead, I see my future in building online businesses from the ground up.
-            This journey not only allows me to explore my passion for web development but also equips me with the skills needed for a potential career as a DevOps engineer.
-            My goal is to create websites that are functional, aesthetically pleasing, and effective in meeting user needs. 
-            I'm excited about the endless possibilities that lie ahead as I continue to grow in this ever-evolving field.</p>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Description of the first project goes here.</p>
-        </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Description of the second project goes here.</p>
-        </div>
-    </section>
-</main>
-
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>© 2024 George Leslie</p>
-            <a href="https://www.linkedin.com/in/george-leslie-/" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/georgeleslie" target="_blank" class="social-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-    </div>
-</footer>
-
-<script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
 </body>
 </html>
