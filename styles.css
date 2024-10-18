@@ -603,9 +603,9 @@ p {
 .footer .social-icons a:hover {
     color: #00c4a6; /* Hover color for social links */
 }
-
-
-
+.footer p {
+    color: var(--main-color);
+}
 /* Responsive Styles for Mobile */
 @media (max-width: 1090px) {
     /* Header and Navbar */
@@ -762,5 +762,6 @@ p {
     .social-link i {
         margin-right: 10px; 
     }
-    .social-link-git-hero{
-        margin-bottom: 8px; 
+    .social-link-git-hero {
+        margin-bottom: 8px;
+    } 
