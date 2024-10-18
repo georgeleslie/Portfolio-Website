@@ -1,88 +1,92 @@
-/* Contact Section */
-.contact-section {
-    padding: 50px 12%;
-    background: var(--bg-color);
-    color: var(--text-color);
+/* Contact Form Container */
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
+    background-color: var(--bg-color);
 }
 
-.contact-section h2 {
-    font-size: 2rem;
-    color: var(--main-color);
-    margin-bottom: 20px;
-}
-
-.contact-form {
+/* Contact Form Styles */
+.contact form {
+    display: flex; 
+    flex-direction: column; 
+    max-width: 600px;  /* Limiting the width for better readability */
     width: 100%;
-    max-width: 600px;
-    background-color: #333;
+    background: #333;  /* Dark background for the form */
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Add shadow for depth */
 }
 
-.contact-form .form-group {
-    margin-bottom: 20px;
+/* Form Labels */
+.contact label {
+    margin-top: 15px;
+    font-size: 1.1rem;  /* Slightly larger labels */
+    color: var(--main-color);  /* Accent color for labels */
+    font-weight: 500;
 }
 
-.contact-form label {
+/* Input and Textarea Fields */
+.contact input, .contact textarea {
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #555;  /* Darker border for input fields */
+    background-color: #444;  /* Dark background for inputs */
+    color: #fff;  /* Light text inside inputs */
+    border-radius: 5px;
     font-size: 1rem;
-    margin-bottom: 8px;
-    display: block;
-    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--main-color);
-    border-radius: 8px;
-    background-color: #222327;
-    color: var(--text-color);
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
+/* Input Focus Effects */
+.contact input:focus, .contact textarea:focus {
+    border-color: var(--main-color);  /* Change border color on focus */
+    background-color: #555;  /* Darken background on focus */
+    outline: none;  /* Remove default outline */
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--main-color);
+/* Textarea Style */
+.contact textarea {
+    min-height: 150px;  /* Ensure the textarea is tall enough */
+    resize: vertical;  /* Allow vertical resizing */
 }
 
-.contact-form textarea {
-    resize: none;
-}
-
-.contact-form .btn-submit {
-    padding: 10px 20px;
-    background: var(--main-color);
-    color: var(--bg-color);
+/* Submit Button */
+.contact button {
+    margin-top: 20px; 
+    padding: 15px;  /* Increased padding for a bigger button */
+    background-color: var(--main-color); 
+    color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 8px;  /* Slightly more rounded corners */
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    font-size: 1.2rem;  /* Larger font for the button */
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;  /* Smooth transitions */
 }
 
-.contact-form .btn-submit:hover {
-    background-color: #00e5b5;
+/* Submit Button Hover Effect */
+.contact button:hover {
+    background-color: #00c4a6;
+    transform: scale(1.05);  /* Slightly larger on hover */
 }
 
-.contact-form .btn-submit:active {
-    transform: scale(0.98);
+/* Submit Button Focus Effect */
+.contact button:focus {
+    outline: none;  /* Remove default focus outline */
+    background-color: #00FFD5;  /* Lighter background when focused */
 }
 
-/* Responsive */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-    .contact-section {
-        padding: 30px 5%;
+    .contact form {
+        max-width: 90%;  /* Reduce width on mobile */
     }
 
-    .contact-form {
-        padding: 20px;
+    .contact button {
+        padding: 12px;  /* Adjust button padding for smaller screens */
+        font-size: 1rem;
     }
 }

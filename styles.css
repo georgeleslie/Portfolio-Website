@@ -335,14 +335,9 @@ header {
     margin-bottom: 20px; /* Space below paragraph */
 }
 
-/* Hamburger Icon */
-#icon-hamburger {
-    font-size: 45px;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
-    position: relative;
-}
+
+
+
 
 /* Section Picture Container */
 .section_pic-container {
@@ -477,6 +472,11 @@ p {
     background: #ffffff; 
 }
 
+
+
+
+
+
 /* Contact Form Styles */
 .contact form {
     display: flex; 
@@ -508,6 +508,11 @@ p {
 .contact button:hover {
     background-color: #00c4a6; 
 }
+
+
+
+
+
 
 /* Footer Section */
 .footer {
@@ -606,6 +611,23 @@ p {
 .footer p {
     color: var(--main-color);
 }
+
+
+
+
+
+
+/* Hamburger Icon */
+#icon-hamburger {
+    font-size: 45px;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+
+
 /* Responsive Styles for Mobile */
 @media (max-width: 1090px) {
     /* Header and Navbar */
