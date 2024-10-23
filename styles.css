@@ -18,6 +18,10 @@ body {
     color: var(--text-color);
     padding-top: 10px; 
     font-family: 'Poppins', sans-serif;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 html {
@@ -472,146 +476,164 @@ p {
     background: #ffffff; 
 }
 
-
-
-
-
-
-/* Contact Form Styles */
-.contact form {
-    display: flex; 
-    flex-direction: column; 
-}
-
-.contact label {
-    margin-top: 10px; 
-}
-
-.contact input, .contact textarea {
-    padding: 10px; 
-    margin-top: 5px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-}
-
-.contact button {
-    margin-top: 10px; 
-    padding: 10px; 
-    background-color: var(--main-color); 
-    color: #fff; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background 0.3s; 
-}
-
-.contact button:hover {
-    background-color: #00c4a6; 
-}
-
-
-
-
-
-
-/* Footer Section */
-.footer {
-    background: var(--bg-color);
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #444;
+.container {
+    margin-left: 30%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 0; /* Add padding to the container */
 }
 
-/* Footer content alignment */
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-form {
+    flex: 1; /* Takes the remaining space */
+    padding: 20px;
+    background: var(--bg-color); /* White background for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 5px; /* Rounded corners */
 }
 
-/* Footer text */
-.footer-content p {
-    color: var(--text-color);
-    margin-bottom: 15px;
+.contact-form h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #00FFD5; /* Heading color */
 }
 
-/* Social links in the footer */
-.footer .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px; /* Ensure consistent spacing between icons */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
 }
 
-/* LinkedIn link */
-.footer .social-link {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    gap: 5px; /* Space between icon and text */
-    color: var(--text-color);
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-.footer .social-link i {
-    font-size: 1.4rem; /* Ensure consistent icon size */
-    margin-right: 5px;
-    line-height: 1.2;
-    display: flex;
-    align-items: center; /* Ensure icons align vertically */
-}
-
-/* GitHub link */
-.footer .social-link-git-hero {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    gap: 5px; /* Space between icon and text */
-    color: var(--text-color);
-    margin-bottom: 18px;
-    transition: color 0.3s ease;
-}
-
-/* Separate class for GitHub icon */
-.footer .social-link-git-hero i {
-    font-size: 1.4rem; /* Ensure consistent icon size */
-    margin-right: 5px;
-    line-height: 1.2;
-    display: flex;
-    align-items: center; /* Ensure icons align vertically */
-}
-
-/* Separate class for GitHub text */
-.footer .social-link-git-hero span {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.2rem; /* Ensure text aligns vertically with icon */
-}
-
-/* Separate class for LinkedIn text */
-.footer .social-link span {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.2rem; /* Ensure text aligns vertically with icon */
-}
-
-.footer .social-icons a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.footer .social-icons a:hover {
-    color: #00c4a6; /* Hover color for social links */
-}
-.footer p {
+.contact-form label {
     color: var(--main-color);
+    padding-left: 10px;
+    display: block; /* Makes the label take full width */
+    margin-bottom: 5px; /* Space between label and input */
 }
 
+.contact-form input,
+.contact-form textarea {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%; /* Full width */
+    padding: 10px; /* Internal padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form button {
+    padding: 10px 15px; /* Padding for button */
+    background-color: #333; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+
+.contact-form button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+footer {
+    background-color: #222327; /* Dark background */
+    color: #fff; /* White text color */
+    padding: 20px 12%; /* Padding around the footer */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Wrap items if necessary */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between sections */
+    width: 100%; /* Full width */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1; /* Equal flex-grow */
+    margin: 0 20px; /* Horizontal margin between sections */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-left h1 {
+    font-size: 1.5rem; /* Main title size */
+    margin-bottom: 5px; /* Space below title */
+}
+
+.footer-center h2,
+.footer-right h2 {
+    font-size: 1.2rem; /* Subtitle size */
+    margin-top: 0; /* Remove margin above subtitle */
+}
+
+.footer-center p,
+.footer-right p {
+    margin: 5px 0; /* Spacing between paragraphs */
+}
+
+
+input[type="email"] {
+    width: 80%; /* Adjust width as needed */
+    padding: 10px; /* Padding inside the input */
+    margin-top: 10px; /* Space above the input */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Simple border */
+    text-align: center; /* Center the text and placeholder */
+}
+
+
+.subscribe-btn {
+    padding: 10px 20px; /* Padding for button */
+    background-color: #333; /* Button background color */
+    color: var(--main-color); /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px auto; /* Center button with auto margins */
+    transition: background-color 0.3s; /* Smooth transition */
+    display: block; /* Make the button a block element */
+}
+
+.subscribe-btn:hover {
+    background-color: #00c4a6; /* Darken on hover */
+}
+
+.social-links {
+    margin-top: 10px; /* Space above social links */
+}
+
+.social-link {
+    margin-right: 10px; /* Space between social links */
+    color: #00FFD5; /* Link color */
+}
+
+.social-link:hover {
+    color: #00c4a6; /* Change color on hover */
+}
+
+footer p {
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Space above footer text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+    .footer-container {
+        flex-direction: column; /* Stack sections */
+        align-items: center; /* Center sections */
+    }
+    input[type="email"] {
+        width: 100%; /* Full width on small screens */
+    }
+}
 
 
 
@@ -625,7 +647,10 @@ p {
     display: none;
     position: relative;
 }
-
+#icon-hamburger.bx-x {
+    /* Add specific styles here to change the icon or toggle its state */
+    color: #00FFD5;
+}
 
 
 /* Responsive Styles for Mobile */
@@ -633,12 +658,17 @@ p {
     /* Header and Navbar */
     header {
         background-color: #000000;
+        padding: 10px 2%; /* Reduced padding to align elements better */
+        display: flex;
+        justify-content: space-between; /* Ensure elements are spaced out */
+        align-items: center; /* Center items vertically */
     }
 
     /* Hamburger Menu Icon */
     #icon-hamburger {
         display: block; 
-        margin-right: 15px;
+        font-size: 35px; /* Adjusted size for better alignment */
+        margin-right: 10px; /* Reduced space to the left */
     }
 
     /* Navbar */
@@ -648,7 +678,7 @@ p {
         right: -100%;
         width: 270px;
         height: auto;
-        background: var (--main-color);
+        background: var(--main-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -675,35 +705,35 @@ p {
         color: var(--main-color);
     }
 
-    /* Logo Adjustments for Mobile */
-    .logo {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        white-space: nowrap; 
-    }
+/* Logo Adjustments for Mobile */
+/* Logo Adjustments for Mobile */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    white-space: nowrap; 
+    font-size: 1.2rem; /* Adjusted size */
+}
 
-    .logo i {
-        font-size: 30px;
-        color: #00FFD5;
-    }
+.logo i {
+    font-size: 2rem;
+    padding-bottom: 5px;
+    color: #00FFD5;
+}
 
-    a.logo {
-        margin-left: 20px;
-        background-color: #000;
-    }
-
-    .logo span {
-        font-size: 0.6rem;
-        font-weight: 600;
-        color: var(--text-color);
-    }
+/* Logo Text */
+.logo span {
+    font-size: 1rem;
+    color: white;
+}
+a.logo {
+    background-color: #000000;
+}
 
     /* Button Styles */
     .btn {
         max-width: fit-content; 
-        padding: 5px 10px; 
-        margin-left: 20px;
+        padding-right: 10px;
     }
 
     .btn a {
@@ -720,7 +750,7 @@ p {
         flex-direction: column; 
         justify-content: center; 
         text-align: center;
-        padding: 50px 
+        padding: 50px;
     }
 
     .hero h1 {
@@ -734,15 +764,15 @@ p {
     }
 
     /* Hero Button */
-   .hero-btn {
-    padding: 12px 35px;
-    font-size: 1.2rem;
-    margin: 10px 20px; /* Adjusted for consistent spacing */
-    background: var(--main-color);
-    border-radius: 10px; /* Add rounded corners */
-    text-align: center; /* Ensure text is centered */
-    display: inline-block; /* Inline block for better alignment */
-}
+    .hero-btn {
+        padding: 12px 35px;
+        font-size: 1.2rem;
+        margin: 10px 20px; /* Adjusted for consistent spacing */
+        background: var(--main-color);
+        border-radius: 10px; /* Add rounded corners */
+        text-align: center; /* Ensure text is centered */
+        display: inline-block; /* Inline block for better alignment */
+    }
 
     .btn.hero-btn {
         margin: 0px; /* Adjust margin for mobile */
@@ -787,4 +817,84 @@ p {
     .social-link-git-hero {
         margin-bottom: 8px;
     } 
+}
+
+footer {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+}
+
+.footer-container {
+    flex-direction: column; /* Stack sections */
+    align-items: center; /* Center sections */
+}
+
+input[type="email"] {
+    width: 100%; /* Full width on small screens */
+}
+
+.container {
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 0; /* Add padding to the container */
+}
+
+.contact-form {
+    flex: 1; /* Takes the remaining space */
+    padding: 20px;
+    background: var(--bg-color); /* White background for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #00FFD5; /* Heading color */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.contact-form label {
+    color: var(--main-color);
+    padding-left: 10px;
+    display: block; /* Makes the label take full width */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%; /* Full width */
+    padding: 10px; /* Internal padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form button {
+    padding: 10px 15px; /* Padding for button */
+    background-color: #333; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact-form button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {
+    /* iPhone X and similar notch devices */
+    /* Add specific styles here */
 }

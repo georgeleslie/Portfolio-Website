@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Declare `menu` and `navbar`
-    let menu = document.querySelector('#icon-hamburger');
-    let navbar = document.querySelector('.navbar');
-    let dropdowns = document.querySelectorAll('.dropdown');
+    const menu = document.querySelector('#icon-hamburger');
+    const navbar = document.querySelector('.navbar');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
     // Toggle hamburger menu for mobile
     menu.onclick = () => {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Handle dropdowns for mobile (Click behavior)
     dropdowns.forEach(dropdown => {
-        let dropdownToggle = dropdown.querySelector('a');
+        const dropdownToggle = dropdown.querySelector('a');
 
         dropdownToggle.onclick = (e) => {
             // Prevent default link behavior and stop propagation
@@ -33,3 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.getElementById('quoteForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Form submitted!');
+    // Here you can add code to send form data to your server
+});

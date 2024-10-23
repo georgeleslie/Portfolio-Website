@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover">
     <meta name="description" content="This is George Leslie's personal profile, showcasing web development projects, skills, and experience.">
     <meta name="keywords" content="George Leslie, web developer, portfolio, projects, web design, web development">
     <meta name="author" content="George Leslie">
@@ -30,9 +30,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="https://www.gdleslie.com/favicon.ico" type="image/x-icon">
 
+    <script src="/script.js" defer></script>
     <title>George Leslie | Web Developer Portfolio</title>
 </head>
 <body>
+    <div id="root"></div>
     <!-- Navigation Menu -->    
     <header>
         <div class="bx bx-menu" id="icon-hamburger"></div>
@@ -170,39 +172,79 @@
         </section>
     </main>
 
-    <!-- Main Section: Contact -->
     <main class="contactmain">
         <section class="contact" id="contact">
-            <h2>Contact Me</h2>
-            <p>
-                Feel free to reach out to me via the contact form below or through my social media links.
-            </p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Contact Us To Get A Quote!</h2>
+                    <form id="quoteForm" action="/submit" method="POST">
+                        <div class="form-group">
+                            <label for="fullName">Full Name*</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Best Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zipCode">Your Zip Code*</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Any Additional Notes?</label>
+                            <textarea id="notes" name="notes" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">REQUEST FREE ESTIMATE</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
+    
+
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footertext">© 2024 George Leslie</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/george-leslie-/" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/georgeleslie" target="_blank" class="social-link-git-hero">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h1>George Leslie</h1>
+                <p>The Web Developer</p>
+            </div>
+            <div class="footer-center">
+                <h2>Contact Information</h2>
+                <p>Phuket Office</p>
+                <p>The Condo On The Cliff<br>Thailand | Phuket<br>Rawai</p>
+                <p>+66838722697 </p>
+                <p>itgeorgeleslie.com</p>
+            </div>
+            <div class="footer-right">
+                <h2>Subscribe to the newsletter</h2>
+                <input type="email" placeholder="Send Me An Email" aria-label="Email">
+                <button class="subscribe-btn">GO</button>
+                <p>By clicking the "GO" button, you agree to the George Leslie Privacy Policy.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/george-leslie-/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i> LinkedIn 
+                    </a>
+                    <a href="https://github.com/georgeleslie" target="_blank" rel="noopener noreferrer" class="social-link-git-hero" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i> <span>GitHub</span>
+                    </a>
+                </div>
             </div>
         </div>
+        <p>© 2024 George Leslie · Privacy Policy</p>
     </footer>
+    
+    
     
     <script type="text/javascript" src="/script.js"></script>
 </body>
