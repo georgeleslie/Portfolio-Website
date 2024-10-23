@@ -38,7 +38,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--bg-color);
+    background: black;
     padding: 10px 12%;
     height: 70px; 
     transition: all 0.5s ease;
@@ -671,39 +671,65 @@ footer p {
         margin-right: 10px; /* Reduced space to the left */
     }
 
-    /* Navbar */
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 270px;
-        height: auto;
-        background: var(--main-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border-radius: 10px;
-        transition: all 0.5s ease;
-    }
+/* Navbar */
+.navbar {
+    margin-top: 70px;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%; /* Partial width of the screen */
+    height: 100vh; /* Full height of the viewport */
+    background: black; /* Match background to your site’s theme */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 10px; /* Add space for links */
+    transition: left 0.5s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    border-radius: 0; /* Flat edge */
+}
 
-    .navbar.open {
-        left: 2%; 
-    }
+.navbar.open {
+    left: 0; /* Slide fully into view */
+}
 
-    .navbar a {
-        display: block;
-        margin: 12px 0;
-        padding: 0 25px;
-        transition: all 0.5s ease;
-    }
+.navbar.open li {
+    padding-top: 30px;
+    margin-bottom: 50px; /* Add spacing between each list item */
+    width: 100%; /* Ensures the full width of each list item */
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Center links vertically */
+    width: 100%; /* Ensure full width of the navbar item */
+}
 
-    ul.navbar.open {
-        background-color: #444;
-    }
+/* Animated appearance for links */
+.navbar.open li a {
+    display: flex; /* Ensure links are flex items */
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Center links vertically */
+    padding: 10px 0; /* Adjust padding inside links */
+    width: 25%; /* Keep link width within the list item */
+    border-radius: 8px; /* Round the edges for better design */
+    background: var(--bg-color); /* Background color for the links */
+    opacity: 0; /* Start with invisible links */
+    transform: translateY(-10px); /* Start with a slight upward offset */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add smooth transition */
+}
 
-    ul.navbar.open a {
-        color: var(--main-color);
-    }
+/* When the menu is open, fade in and slide links */
+.navbar.open li a {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide to normal position */
+}
+
+/* Optional: Add a hover effect for links */
+.navbar li a:hover {
+    color: #00c4a6; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
 
 /* Logo Adjustments for Mobile */
 /* Logo Adjustments for Mobile */

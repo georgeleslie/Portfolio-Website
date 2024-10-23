@@ -26,13 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close dropdowns if clicking outside (for mobile)
     window.onclick = (e) => {
-        if (!navbar.contains(e.target)) {
+        // If clicking outside the navbar, close the menu and any open dropdowns
+        if (!navbar.contains(e.target) && !menu.contains(e.target)) {
+            navbar.classList.remove('open');
+            menu.classList.remove('bx-x');
             dropdowns.forEach(dropdown => dropdown.classList.remove('open'));
         }
     };
 });
 
-
+// Handle form submission for a quote form
 document.getElementById('quoteForm').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Form submitted!');
