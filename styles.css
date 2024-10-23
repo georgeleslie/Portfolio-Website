@@ -289,7 +289,7 @@ header {
 .hero-btn {
     padding: 12px 35px; /* Increased padding for hero buttons */
     font-size: 1.5rem; /* Increased font size for hero buttons */
-    background: var(--main-color);
+    background: #333;
     border-radius: 10px;
     display: inline-block;
     text-align: center;
@@ -444,7 +444,7 @@ p {
 
 /* Card Styles */
 .project-card, .skills-card, .blog-card, .resume-card {
-    background: #333; 
+    background: var(--bg-color); 
     padding: 20px; 
     border-radius: 10px; 
     margin-bottom: 20px; 
@@ -459,8 +459,40 @@ p {
 
 /* Specific Styles for Skills Section */
 .skills-card {
-    background: black; 
-}
+    background: #f5f5f5; /* Card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skills-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skills-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .skills-list li strong {
+    color: #007bff; /* Highlight skill name */
+  }
+  
 
 /* Specific Styles for Blog Section */
 .blog-card {
@@ -518,7 +550,7 @@ p {
 .contact-form button {
     padding: 10px 15px; /* Padding for button */
     background-color: #333; /* Green background */
-    color: white; /* White text */
+    color: var(--main-color); /* White text */
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
@@ -631,7 +663,14 @@ footer p {
     }
 }
 
-
+.Links {
+    color: var(--main-color);
+  }
+  
+  .Links:hover {
+    color: #2c3e50; /* A different color when hovered */
+    text-decoration: underline; /* Underline when hovered */
+  }
 
 
 
@@ -759,7 +798,7 @@ a.logo {
     }
 
     .btn a {
-        font-size: 0.7rem; 
+        font-size: medium; 
         font-weight: 600;
         color: #00FFD5;
         white-space: nowrap; 
@@ -790,7 +829,7 @@ a.logo {
         padding: 12px 35px;
         font-size: 1.2rem;
         margin: 10px 20px; /* Adjusted for consistent spacing */
-        background: var(--main-color);
+        background: var(--bg-color);
         border-radius: 10px; /* Add rounded corners */
         text-align: center; /* Ensure text is centered */
         display: inline-block; /* Inline block for better alignment */
