@@ -273,7 +273,28 @@ header {
     font-weight: bold;
     transform: translate(10px, 10px);
 }
+/*dont touch above*/
+/*dont touch above*/
+/*dont touch above*/
+/*dont touch above*/
+/*dont touch above*/
+/*dont touch above*/
+/*dont touch above*/
 
+/* Section Picture Container */
+.section_pic-container {
+    flex: 1 1 30%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    margin-left: 150px; 
+}
+
+.section_pic-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 /* Flexbox container for hero buttons */
 .hero-content {
     display: flex;
@@ -341,20 +362,6 @@ header {
     margin-bottom: 20px; /* Space below paragraph */
 }
 
-/* Section Picture Container */
-.section_pic-container {
-    flex: 1 1 30%;
-    max-width: 300px;
-    margin-bottom: 20px;
-    margin-left: 150px; 
-}
-
-.section_pic-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
 
 /* Social links */
 .social-links {
@@ -380,6 +387,14 @@ header {
 .social-link-git-hero{
     margin-top: 8px; 
 }
+
+/*1st section above*/
+/*1st section above*/
+/*1st section above*/
+/*1st section above*/
+
+
+
 
 /* Main Section Styles */
 .aboutmain, .skillsmain, .blogmain, .resumemain, .contactmain {
@@ -513,7 +528,19 @@ p {
 .resume-card {
     background: #ffffff; 
 }
+/*main section above*/
+/*main section above*/
+/*main section above*/
+/*main section above*/
 
+
+
+/* Main Contact Section Styling */
+.contactmain {
+    width: 100%;
+    padding: 50px 0;
+    background: var(--bg-color); /* Use the theme background */
+}
 
 /* Contact Section Styles */
 .contact {
@@ -531,8 +558,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%; /* Set an appropriate width for larger screens */
-    max-width: 900px; /* Prevent the form from being too wide */
+    width: 90%;
+    max-width: 900px; /* Prevent form from being too wide */
     margin: auto;
 }
 
@@ -545,62 +572,92 @@ p {
     margin-bottom: 30px;
 }
 
-/* Form Styling */
+/* Contact Form Styling */
 .contact-form {
-    width: 100%; /* Take full width of the container */
-    background: var(--bg-color);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    width: 100%; /* Full width within the container */
+    background: #222327; /* Dark background for the form */
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
-
+.contactmain {
+    background-color: #000
+    
+    ;
+}
 /* Form Group Styling */
 .form-group {
     width: 100%; /* Full width for each form group */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Label Styling */
 .contact-form label {
     color: #00FFD5;
     display: block;
     text-align: left; /* Align labels to the left */
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 /* Input and Textarea Styling */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    border: 1px solid #444; /* Slightly darker border for contrast */
+    border-radius: 6px;
+    background: #333;
+    color: #fff; /* Text color inside inputs */
+}
+
+/* Consistent Height for Inputs */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="number"] {
+    height: 45px; /* Uniform height for all text inputs */
+}
+
+/* Input Placeholder Color */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa; /* Lighter color for placeholders */
 }
 
 /* Form Button Styling */
-.contact-form button {
+.contact-form .btn {
     width: 100%; /* Full width for the button */
-    padding: 12px 15px; /* Adjusted padding for comfort */
-    font-size: 1rem;
-    background-color: var(--bg-color);
-    color: var(--main-color);
-    border: none; /* Remove border for a cleaner look */
-    border-radius: 6px; /* Slightly increased border radius for a modern look */
+    padding: 15px;
+    font-size: 1.1rem;
+    background-color: #00FFD5;
+    color: #000;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for smooth interaction */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-align: center;
 }
 
-.contact-form button:hover {
+/* Button Hover Effects */
+.contact-form .btn:hover {
     background-color: #00c4a6;
-    transform: scale(1.02); /* Slight scale effect on hover for better interactivity */
+    transform: scale(1.02);
 }
 
-.contact-form button:focus {
-    outline: 2px solid #00FFD5; /* Added focus outline for accessibility */
-    outline-offset: 2px; /* Ensure the outline doesn’t overlap the button */
+/* Button Focus Outline for Accessibility */
+.contact-form .btn:focus {
+    outline: 2px solid #00FFD5;
+    outline-offset: 2px;
 }
-
+/*contcact form above*/
+/*contcact form above*/
+/*contcact form above*/
+/*contcact form above*/
+/*contcact form above*/
+/*contcact form above*/
 
 a.links {
     color: var(--main-color);
@@ -795,10 +852,42 @@ form button .ri-mail-send-line {
 
 .footer-social-links {
     display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-left: 50%;
-    padding-bottom: 10px;
+    justify-content: center; /* Center align the icons */
+    gap: 20px; /* Add space between each icon */
+    padding-bottom: 20px;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-left: 200px;
+}
+
+.footer-links-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px; /* Adjust size based on your design */
+    height: 45px;
+    border-radius: 50%;
+    background: var(--main-color); /* Match your main color */
+    text-decoration: none;
+    color: var(--bg-color); /* Match background color */
+    transition: transform 0.3s ease;
+}
+
+.footer-links-container a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover for interactivity */
+}
+
+.footer-links-container a i {
+    font-size: 18px; /* Icon size */
+}
+
+
+.footer-links-container a i {
+    font-size: 20px;
 }
 
 .footer-social-links i {
@@ -858,7 +947,7 @@ form button .ri-mail-send-line {
 /* Underline Styling */
 .contact-container .underline {
     width: 100%; /* Match the width to the heading */
-    height: 3px; /* Standard thickness for the line */
+    height: 4px; /* Standard thickness for the line */
     background: #767676;
     border-radius: 3px;
     position: absolute;
@@ -898,6 +987,14 @@ form button .ri-mail-send-line {
     margin: 10px 0;
 }
 
+/*contact form above*/
+/*contact form above*/
+/*contact form above*/
+/*contact form above*/
+/*contact form above*/
+
+
+
 /* Keyframes for Animation */
 @keyframes moving {
     0% {
@@ -907,14 +1004,52 @@ form button .ri-mail-send-line {
         left: 100%;
     }
 }
-/* Responsive Design for Mobile View */
+
+
+
+
+/* -----------------------------------
+   Responsive Design for Mobile View
+-------------------------------------- */
 @media (max-width: 768px) {
+    /* Adjust container width for small screens */
     .container {
         width: 95%;
     }
+
+    /* Footer Container Adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Column Adjustments for Small Screens */
+    .col {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Center the Footer Favicon */
+    .favfooter {
+        margin: 0 auto 20px;
+    }
+
+    /* Center Footer Social Links */
+    div.footer-social-links {
+        justify-content: center;
+    }
+
+    /* Adjust Newsletter Form Input Width */
+    form input[type="email"] {
+        width: 90%;
+        margin-bottom: 10px;
+    }
 }
 
-/* Newsletter Form Styling */
+/* -----------------------------------
+   Newsletter Form Styling
+-------------------------------------- */
 .newsletter-form {
     display: flex;
     align-items: center;
@@ -926,6 +1061,7 @@ form button .ri-mail-send-line {
     margin: 0 auto; /* Center the form */
 }
 
+/* Icon Styling Inside Newsletter Form */
 .newsletter-form .form-icon {
     display: flex;
     justify-content: center;
@@ -934,11 +1070,13 @@ form button .ri-mail-send-line {
     padding: 5px;
 }
 
+/* Icon Size and Color in Newsletter Form */
 .newsletter-form .form-icon i {
     font-size: 18px;
     color: #00FFD5;
 }
 
+/* Input Styling Inside Newsletter Form */
 .newsletter-form input[type="email"] {
     width: 100%;
     max-width: 200px; /* Adjust input width as needed */
@@ -951,11 +1089,14 @@ form button .ri-mail-send-line {
     text-align: center; /* Center the text in the input */
 }
 
+/* Pointer Cursor for Icon in Newsletter Form */
 .newsletter-form .form-icon:last-child i {
     cursor: pointer;
 }
 
-/* Navigation and Hero Section Styles */
+/* -----------------------------------
+   Navigation and Hero Section Styles
+-------------------------------------- */
 #icon-hamburger {
     font-size: 45px;
     color: var(--text-color);
@@ -964,93 +1105,101 @@ form button .ri-mail-send-line {
     position: relative;
 }
 
+/* Color Change for Hamburger Icon When Opened */
 #icon-hamburger.bx-x {
     color: #00FFD5;
 }
 
-
-
 @media (max-width: 1090px) {
+    /* Header Adjustments for Medium-Sized Screens */
     header {
         background-color: #000000;
-        padding: 10px 2%; /* Reduced padding to align elements better */
+        padding: 10px 2%; /* Reduced padding for alignment */
         display: flex;
-        justify-content: space-between; /* Ensure elements are spaced out */
+        justify-content: space-between;
         align-items: center; /* Center items vertically */
     }
 
-    h3{
+    /* Heading Margin Adjustments */
+    h3 {
         margin-left: 40px;
     }
 
+    /* Display Hamburger Icon on Medium-Sized Screens */
     #icon-hamburger {
-        display: block; 
-        font-size: 35px; /* Adjusted size for better alignment */
+        display: block;
+        font-size: 35px;
         margin-right: 10px; /* Reduced space to the left */
     }
 
+    /* Navbar Styling for Medium-Sized Screens */
     .navbar {
         margin-top: 70px;
         position: fixed;
         top: 0;
         left: -100%; /* Start off-screen */
-        width: 100%; /* Partial width of the screen */
+        width: 100%;
         height: 100vh; /* Full height of the viewport */
-        background: black; /* Match background to your site’s theme */
+        background: black; /* Match background to the site’s theme */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 20px 10px; /* Add space for links */
+        padding: 20px 10px;
         transition: left 0.5s ease; /* Smooth transition */
-        z-index: 1000; /* Ensure it's on top of other elements */
-        border-radius: 0; /* Flat edge */
+        z-index: 1000;
+        border-radius: 0;
     }
 
+    /* Navbar in Open State */
     .navbar.open {
         left: 0; /* Slide fully into view */
     }
 
+    /* Navbar List Items Styling */
     .navbar.open li {
         padding-top: 30px;
-        margin-bottom: 50px; /* Add spacing between each list item */
-        width: 100%; /* Ensures the full width of each list item */
+        margin-bottom: 50px;
+        width: 100%;
         display: flex;
-        justify-content: center; /* Center links horizontally */
-        align-items: center; /* Center links vertically */
+        justify-content: center;
+        align-items: center;
     }
 
+    /* Navbar Links Styling */
     .navbar.open li a {
-        display: flex; /* Ensure links are flex items */
-        justify-content: center; /* Center links horizontally */
-        align-items: center; /* Center links vertically */
-        padding: 10px 0; /* Adjust padding inside links */
-        width: 25%; /* Keep link width within the list item */
-        border-radius: 8px; /* Round the edges for better design */
-        background: var(--bg-color); /* Background color for the links */
-        opacity: 0; /* Start with invisible links */
-        transform: translateY(-10px); /* Start with a slight upward offset */
-        transition: opacity 0.5s ease, transform 0.5s ease; /* Add smooth transition */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        width: 25%; /* Adjust width of each link */
+        border-radius: 8px;
+        background: var(--bg-color);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
+    /* Navbar Links in Open State */
     .navbar.open li a {
         opacity: 1; /* Fade in */
         transform: translateY(0); /* Slide to normal position */
     }
 
+    /* Hover Effects for Navbar Links */
     .navbar li a:hover {
-        color: #00c4a6; /* Change color on hover */
-        transform: scale(1.05); /* Slightly enlarge on hover */
-        transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+        color: #00c4a6;
+        transform: scale(1.05);
+        transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    /* Logo Adjustments for Mobile */
+    /* Mobile Logo Adjustments */
     .logo {
         margin-left: 5px;
         display: flex;
         align-items: center;
-        white-space: nowrap; 
-        font-size: 1.2rem; /* Adjusted size */
+        white-space: nowrap;
+        font-size: 1.2rem;
     }
 
     .logo i {
@@ -1064,121 +1213,109 @@ form button .ri-mail-send-line {
         color: white;
     }
 
+    /* Link Background Color for Mobile */
     a.logo {
         background-color: #000000;
     }
 
-    /* Hero Section Styles */
+    /* Hero Section Styling */
     .hero {
-        height: auto; 
+        height: auto;
         display: flex;
-        flex-direction: column; 
-        justify-content: center; 
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
         padding: 50px;
     }
 
     .hero h1 {
-        font-size: 2rem; 
+        font-size: 2rem;
         margin-bottom: 15px;
     }
 
     .hero p {
-        font-size: 1rem; 
+        font-size: 1rem;
         margin-bottom: 20px;
     }
 
+    /* Hero Button Styling */
     .hero-btn {
         padding: 12px 35px;
         font-size: 1.2rem;
-        margin: 10px 20px; /* Adjusted for consistent spacing */
+        margin: 10px 20px;
         background: var(--bg-color);
-        border-radius: 10px; /* Add rounded corners */
-        text-align: center; /* Ensure text is centered */
-        display: inline-block; /* Inline block for better alignment */
+        border-radius: 10px;
+        text-align: center;
+        display: inline-block;
     }
 
-    /* Section Picture Container */
+    /* Section Picture Container Styling */
     .section_pic-container {
-        max-width: 200px; 
-        margin: 15px auto; 
-        padding-top: 20px; 
+        max-width: 200px;
+        margin: 15px auto;
+        padding-top: 20px;
     }
 
-    /* Social Links */
+    /* Social Links Styling */
     .social-links {
         display: flex;
-        justify-content: center; 
-        align-items: center; 
-        gap: 20px; 
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
         padding-bottom: 20px;
-        margin-right: 80px; 
+        margin-right: 80px;
     }
 
     .social-link,
     .social-link-git-hero {
-        font-size: 1.2rem; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        text-decoration: none; 
-        color: white;  
-        transition: color 0.3s ease; 
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
     }
 
+    /* Hover Effects for Social Links */
     .social-link:hover,
     .social-link-git-hero:hover {
-        color: #00c4a6; 
+        color: #00c4a6;
     }
 
     .social-link i {
-        margin-right: 10px; 
+        margin-right: 10px;
     }
 
     .social-link-git-hero {
         margin-bottom: 8px;
-    } 
+    }
 }
+/* Responsive Design for Smaller Screens */
+    .container {
+        width: 95%; /* Slightly wider container for smaller screens */
+    }
 
+    .contact-form h2 {
+        font-size: 1.8rem; /* Adjust heading size for mobile */
+    }
+
+    .contact-form .btn {
+        font-size: 1rem; /* Slightly smaller button font size */
+        padding: 12px 15px; /* Adjust padding for smaller screens */
+    }
+
+/* -----------------------------------
+   Footer Styling
+-------------------------------------- */
 .footer-links-container {
     margin-right: 200px;
     display: flex;
-
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .col {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .favfooter {
-        margin: 0 auto 20px;
-    }
-
-    div.footer-social-links {
-        justify-content: center;
-    }
-
-
-    form input[type="email"] {
-        width: 90%;
-        margin-bottom: 10px;
-    }
-}
-
-
-/* Notch Adjustments for iPhone X and Similar Devices */
-@media only screen 
-    and (device-width: 375px) 
-    and (device-height: 812px) 
-    and (-webkit-device-pixel-ratio: 3) {
+/* -----------------------------------
+   Notch Adjustments for iPhone X and Similar Devices
+-------------------------------------- */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     /* Add specific styles here for iPhone X-like devices */
 }

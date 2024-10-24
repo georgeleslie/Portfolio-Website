@@ -1,107 +1,58 @@
-/* About Page Styles */
 .aboutmain {
-    padding: 50px 12%; /* Padding around the section */
-    background: var(--bg-color); /* Background color matching your design */
-    color: var(--text-color); /* Text color */
+    margin-top: 50px;
+}
+/* General Paragraph Styling */
+p {
+    color: var(--text-color); /* Matches the website's primary text color */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 /* Heading Styles */
-.aboutmain h2 {
-    font-size: 2.5rem; /* Size of the main heading */
-    margin-bottom: 20px; /* Space below heading */
-    color: var(--main-color); /* Main color for heading */
-    text-align: center; /* Center align heading */
+h4 {
+    font-size: 1.5rem;
+    color: #00FFD5; /* Main accent color */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00FFD5; /* Add an accent line under headings */
+    padding-bottom: 5px;
 }
 
-/* Content Flex Container */
-.about-content {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Center align content */
-    margin: 30px 0; /* Margin above and below content */
+/* Skills List Styling */
+.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 25px;
 }
 
-
-/* Text Container */
-.about-text {
-    max-width: 600px; /* Limit text width for readability */
+.skills-list li {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* Subheading Styles */
-.aboutmain h3 {
-    font-size: 2rem; /* Size for the subheading */
-    color: var(--main-color); /* Subheading color */
-    margin-bottom: 10px; /* Space below subheading */
+.skills-list li:hover {
+    background: #00c4a6; /* Slight hover effect */
 }
 
-/* Paragraph Styles */
-.aboutmain p {
-    font-size: 1.2rem; /* Font size for paragraphs */
-    line-height: 1.5; /* Line height for readability */
-    margin-bottom: 20px; /* Space below paragraphs */
+/* Hobbies Section Styling */
+h4 + p {
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
-/* Button Styles */
-.btn-about {
-    padding: 10px 30px; /* Padding for buttons */
-    border: none; /* No border */
-    outline: none; /* No outline */
-    color: var(--main-color); /* Button text color */
-    background: transparent; /* Transparent background */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 12px; /* Rounded corners */
-    transition: background 0.3s, transform 0.3s; /* Transition effects */
+/* Call-to-Action Styling */
+h4:last-of-type {
+    margin-top: 40px;
 }
 
-/* Hover Effects for About Button */
-.btn-about:hover {
-    background: rgba(255, 255, 255, 0.1); /* Slightly change background on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
-}
-
-/* More About Me Heading */
-.aboutmain h4 {
-    margin-top: 40px; /* Space above the heading */
-    font-size: 2rem; /* Heading size */
-    color: var(--main-color); /* Color for headings */
-    text-align: center; /* Center align headings */
-}
-
-/* Social Links Styles */
-.social-links-about {
-    display: flex; /* Flex to align social links */
-    justify-content: center; /* Center align */
-    gap: 15px; /* Space between social links */
-    margin-top: 20px; /* Space above the links */
-}
-
-.social-link-about {
-    font-size: 1.2rem; /* Font size for social links */
-    color: var(--main-color); /* Text color */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for social links */
-.social-link-about:hover {
-    color: #00c4a6; /* Change color on hover */
-}
-
-/* Responsive Styles */
-@media (max-width: 1090px) {
-    .aboutmain {
-        padding: 20px 5%; /* Adjust padding for mobile */
-    }
-
-    .aboutmain h2 {
-        font-size: 2rem; /* Reduce heading size for mobile */
-    }
-
-    .profile-image {
-        width: 120px; /* Smaller image for mobile */
-        height: 120px; /* Smaller image for mobile */
-    }
-
-    .aboutmain h4 {
-        font-size: 1.5rem; /* Smaller size for mobile */
-    }
+h4:last-of-type + p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
 }

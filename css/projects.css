@@ -1,0 +1,73 @@
+.projects {
+    background-color: var(--bg-color);
+    padding-top: 100px; /* Adjust the value as needed */
+}
+h1 {
+text-align: center;
+font-size: 2rem;
+color: var(--main-color);
+text-decoration: underline;
+padding-bottom: 20px;
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+}
+
+/* General Styling for Project Section */
+.project-highlight {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Main Heading */
+.project-highlight h1 {
+    font-size: 2rem;
+    color: #00FFD5; /* Accent color */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Subheadings */
+.project-highlight h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #00FFD5;
+    border-bottom: 2px solid #00FFD5;
+    padding-bottom: 8px;
+}
+
+/* Paragraph Styling */
+.project-highlight p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* Feature List */
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.feature-list li {
+    background: #333;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+.feature-list li:hover {
+    background: #00c4a6; /* Slight hover effect */
+}
+
+.feature-list strong {
+    color: #00FFD5; /* Highlight key features */
+}

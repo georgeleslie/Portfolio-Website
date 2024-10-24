@@ -1,0 +1,54 @@
+/* Resume Section Styling */
+h1{
+    padding-top: 50px;
+}
+.resume {
+    padding: 50px 20px; /* Add padding to separate from header */
+    background: #222327; /* Match your overall site background color */
+    color: var(--text-color); /* Match text color */
+    text-align: center;
+}
+
+.resume-title {
+    font-size: 2.5rem; /* Larger title size */
+    color: var(--main-color); /* Accent color */
+    margin-bottom: 20px;
+}
+
+.resume-viewer {
+    max-width: 800px; /* Restrict maximum width to avoid full-screen width issues */
+    margin: 0 auto; /* Center the viewer */
+    background: #333; /* Background for contrast */
+    border-radius: 10px;
+    overflow: hidden; /* Smooth border edges */
+}
+
+.pdf-embed {
+    width: 100%;
+    height: 800px; /* Adjust height based on preference */
+    border: none;
+}
+
+.pdf-fallback {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: var(--text-color); /* Match the main text color */
+}
+
+/* Download Button Styling */
+.btn-download {
+    display: inline-block;
+    background-color: #00FFD5;
+    color: #000;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: #00c4a6;
+    transform: scale(1.05);
+}
