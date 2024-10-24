@@ -529,8 +529,11 @@ p {
     background: #ffffff; 
 }
 .project-card{
-    background-color: white;
-    color: #000;
+    background: var(--bg-color); /* Card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 /*main section above*/
 /*main section above*/
