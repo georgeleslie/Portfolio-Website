@@ -433,6 +433,10 @@ h2 {
     animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
 }
 
+h3{
+    text-align: center;
+}
+
 /* Paragraph Styles */
 p {
     padding: 5px;
@@ -446,7 +450,7 @@ p {
 
 /* Card Styles */
 .project-card, .skills-card, .blog-card, .resume-card {
-    background: var(--bg-color); 
+    background: black; 
     padding: 20px; 
     border-radius: 10px; 
     margin-bottom: 20px; 
@@ -456,12 +460,14 @@ p {
 /* Hover Effects for Cards */
 .project-card:hover, .skills-card:hover, .blog-card:hover, .resume-card:hover {
     transform: translateY(-10px); 
-    background: rgba(255, 255, 255, 0.1); 
+    background: var(--bg-color); 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--main-color);
 }
 
 /* Specific Styles for Skills Section */
 .skills-card {
-    background: #f5f5f5; /* Card background */
+    background: var(--bg-color); /* Card background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -469,18 +475,20 @@ p {
   }
   
   .skills-card:hover {
+    background-color: #000;
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px var(--main-color);
   }
   
   .skills-title {
     font-size: 24px;
-    color: #333;
+    color: var(--main-color);
     margin-bottom: 15px;
     text-align: center;
   }
   
   .skills-list {
+    text-align: center;
     list-style-type: none;
     padding: 0;
   }
@@ -488,11 +496,11 @@ p {
   .skills-list li {
     padding: 10px;
     font-size: 16px;
-    color: #555;
+    color: #ffffff;
   }
   
   .skills-list li strong {
-    color: #007bff; /* Highlight skill name */
+    color: var(--main-color); /* Highlight skill name */
   }
   
 
@@ -506,6 +514,94 @@ p {
     background: #ffffff; 
 }
 
+
+/* Contact Section Styles */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Container for Form and Heading */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* Set an appropriate width for larger screens */
+    max-width: 900px; /* Prevent the form from being too wide */
+    margin: auto;
+}
+
+/* Centered Heading */
+.contact-form h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    color: #00FFD5;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.contact-form {
+    width: 100%; /* Take full width of the container */
+    background: var(--bg-color);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Group Styling */
+.form-group {
+    width: 100%; /* Full width for each form group */
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    color: #00FFD5;
+    display: block;
+    text-align: left; /* Align labels to the left */
+    margin-bottom: 8px;
+}
+
+/* Input and Textarea Styling */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Form Button Styling */
+.contact-form button {
+    width: 100%; /* Full width for the button */
+    padding: 12px 15px; /* Adjusted padding for comfort */
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 6px; /* Slightly increased border radius for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for smooth interaction */
+}
+
+.contact-form button:hover {
+    background-color: #00c4a6;
+    transform: scale(1.02); /* Slight scale effect on hover for better interactivity */
+}
+
+.contact-form button:focus {
+    outline: 2px solid #00FFD5; /* Added focus outline for accessibility */
+    outline-offset: 2px; /* Ensure the outline doesn’t overlap the button */
+}
+
+
 a.links {
     color: var(--main-color);
     text-decoration: none; /* Optional: to remove underline */
@@ -515,15 +611,6 @@ a.links:hover,
 a.links:focus {
     text-decoration: underline; /* Optional: to add hover effect */
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Footer Styles */
@@ -564,10 +651,13 @@ footer {
 }
 
 .col {
-        flex: 1;
-        padding: 10px;
-        min-width: 200px; /* Minimum width for each column */
- }
+        display: flex;
+        flex-direction: column; /* Arrange elements vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        text-align: center;
+        padding: 20px; /* Optional: Add padding for spacing */
+    }
 
 .col:nth-child(2),
 .col:nth-child(3) {
@@ -577,7 +667,19 @@ footer {
 /* Footer Logo */
 .favfooter {
     width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Ensure the logo is circular */
     margin-bottom: 20px;
+}
+.col h1 {
+    font-size: 1.5rem; /* Adjust font size */
+    margin: 10px 0; /* Adjust margin */
+    font-weight: bold;
+}
+
+.col p {
+    font-size: 1rem; /* Adjust subtitle font size */
+    color: #ccc; /* Subtle color to contrast */
 }
 
 /* Footer Headings */
@@ -586,6 +688,43 @@ footer {
         margin-bottom: 20px;
         position: relative;
     }
+    /* Links Section */
+.col h3 {
+    width: fit-content;
+    margin: 0 auto 20px auto; /* Center the heading */
+}
+
+ul.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the text in the list */
+}
+
+ul.footer-links li {
+    margin-bottom: 12px;
+}
+
+/* Newsletter Section */
+.col form {
+    width: 100%;
+    max-width: 300px; /* Optional: Adjust width for better consistency */
+    margin: 0 auto; /* Center the form within the column */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+form input[type="email"] {
+    width: 100%;
+    max-width: 200px;
+    text-align: center; /* Center the email input text */
+}
+
+form button {
+    width: 100%;
+    max-width: 100px; /* Optional: Adjust width for better design */
+}
 
 /* Email ID Styling */
 .email-id {
@@ -658,7 +797,6 @@ form button .ri-mail-send-line {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    padding-top: 20px;
     margin-left: 50%;
     padding-bottom: 10px;
 }
@@ -679,30 +817,85 @@ form button .ri-mail-send-line {
 .copyright {
     text-align: center;
     margin-top: 30px;
-    margin-left: 100px;
 }
 
 /* Underline Animation */
+/* Underline Styling */
 .underline {
     width: 100%;
-    height: 5px;
+    height: 3px; /* Make sure this matches for all underlines */
     background: #767676;
     border-radius: 3px;
     position: absolute;
-    top: 25px;
+    top: 25px; /* Adjust if needed to align properly */
     left: 0;
     overflow: hidden;
 }
 
 .underline span {
-    width: 15px;
+    width: 50px; /* Standard width for all underline spans */
     height: 100%;
-    background: #fff;
+    background: var(--main-color);
     border-radius: 3px;
     position: absolute;
     top: 0;
     left: 10px;
     animation: moving 2s linear infinite;
+}
+
+.contact-container {
+    text-align: center;
+    margin: 0 auto;
+}
+.contact-container h3 {
+    font-size: 1rem; /* Adjusted size for consistency */
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block; /* Ensures the width of the heading matches the text */
+}
+
+/* Underline Styling */
+.contact-container .underline {
+    width: 100%; /* Match the width to the heading */
+    height: 3px; /* Standard thickness for the line */
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 120%; /* Position it just below the heading */
+    left: 0;
+}
+
+.contact-container .underline span {
+    display: block;
+    width: 50px; /* Length of the colored section of the underline */
+    height: 100%;
+    background: var(--main-color); /* Use the main accent color */
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.contact-container p,
+.contact-container h4 {
+    font-size: 0.9rem; /* Align font size with other sections */
+    margin: 6px 0; /* Reduce margins for more compact appearance */
+}
+
+/* Email and Phone Styling */
+.contact-container .email-id,
+.contact-container h4 a {
+    display: inline-block;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem; /* Consistent with other text elements */
+}
+
+.contact-container .email-id {
+    border: 1px solid #ccc;
+    padding: 4px 8px; /* Reduce padding inside the email box */
+    margin: 10px 0;
 }
 
 /* Keyframes for Animation */
@@ -714,96 +907,6 @@ form button .ri-mail-send-line {
         left: 100%;
     }
 }
-
-
-
-
-
-
-/* Contact Section Styles */
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Container for Form and Heading */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%; /* Set an appropriate width for larger screens */
-    max-width: 900px; /* Prevent the form from being too wide */
-    margin: auto;
-}
-
-/* Centered Heading */
-.contact-form h2 {
-    text-align: center;
-    width: 100%;
-    font-size: 2rem;
-    color: #00FFD5;
-    margin-bottom: 30px;
-}
-
-/* Form Styling */
-.contact-form {
-    width: 100%; /* Take full width of the container */
-    background: var(--bg-color);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Form Group Styling */
-.form-group {
-    width: 100%; /* Full width for each form group */
-    margin-bottom: 15px;
-}
-
-.contact-form label {
-    color: #00FFD5;
-    display: block;
-    text-align: left; /* Align labels to the left */
-    margin-bottom: 8px;
-}
-
-/* Input and Textarea Styling */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-/* Form Button Styling */
-.contact-form button {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 1rem;
-    background-color: var(--bg-color);
-    color: var(--main-color);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #00c4a6;
-}
-
-
-
-
-
-
 /* Responsive Design for Mobile View */
 @media (max-width: 768px) {
     .container {
@@ -852,20 +955,6 @@ form button .ri-mail-send-line {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Navigation and Hero Section Styles */
 #icon-hamburger {
     font-size: 45px;
@@ -881,19 +970,6 @@ form button .ri-mail-send-line {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1090px) {
     header {
         background-color: #000000;
@@ -901,6 +977,10 @@ form button .ri-mail-send-line {
         display: flex;
         justify-content: space-between; /* Ensure elements are spaced out */
         align-items: center; /* Center items vertically */
+    }
+
+    h3{
+        margin-left: 40px;
     }
 
     #icon-hamburger {
@@ -1059,6 +1139,13 @@ form button .ri-mail-send-line {
         margin-bottom: 8px;
     } 
 }
+
+.footer-links-container {
+    margin-right: 200px;
+    display: flex;
+
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-container {
@@ -1076,7 +1163,7 @@ form button .ri-mail-send-line {
         margin: 0 auto 20px;
     }
 
-    .footer-social-links {
+    div.footer-social-links {
         justify-content: center;
     }
 
