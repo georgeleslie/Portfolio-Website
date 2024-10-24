@@ -628,13 +628,11 @@ p {
     width: 100%; /* Let it fill the width of the container */
     max-width: none; /* Remove fixed width limitation */
     padding: 12px; /* Ensure padding matches other inputs */
-    text-align: left; /* Align text inside input to the left */
 }
 
-/* Placeholder Specific Styling */
+/* Input Specific Placeholder Fix for Alignment */
 .contact-form input[type="email"]::placeholder {
     text-align: left; /* Align placeholder text to the left */
-    color: #aaa; /* Optional: Add lighter color for placeholder text */
 }
 
 /* Fix Padding in Inputs */
@@ -644,12 +642,11 @@ p {
 }
 
 /* Form Button Styling */
-.contact-form .btn {
-    margin-left: 300px;
+.contact-btn {
     width: 100%; /* Full width */
     max-width: 250px; /* Adjust width as needed */
     padding: 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: var(--bg-color);
     color: var(--main-color);
     border: none;
@@ -663,13 +660,13 @@ p {
 }
 
 /* Button Hover Effects */
-.contact-form .btn:hover {
+.contact-btn:hover {
     background-color: #00c4a6;
     transform: scale(1.02);
 }
 
 /* Button Focus Outline for Accessibility */
-.contact-form .btn:focus {
+.contact-btn:focus {
     outline: 2px solid #00FFD5;
     outline-offset: 2px;
 }
@@ -926,17 +923,20 @@ form button .ri-mail-send-line {
 }
 
 .footer-card {
-    background: #2a2a2a; /* Set background color for the card */
+    background: #000000; /* Set background color for the card */
     border-radius: 12px; /* Rounded corners for the card */
     padding: 20px; /* Space inside the card */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for 3D effect */
+    box-shadow: 0 4px 1px var(--main-color); /* Optional shadow for 3D effect */
     margin: 20px; /* Space between cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .footer-card:hover {
     transform: translateY(-5px); /* Lift card slightly on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increase shadow depth on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px); 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--main-color); /* Increase shadow depth on hover */
 }
 /* Copyright Section */
 .copyright {
@@ -1231,7 +1231,7 @@ form button .ri-mail-send-line {
 
     /* Mobile Logo Adjustments */
     .logo {
-        margin-left: 5px;
+        margin-right: 5px;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -1327,6 +1327,14 @@ form button .ri-mail-send-line {
         margin-bottom: 8px;
     }
 }
+
+.skills-card {
+    background: black; /* Card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 /* Responsive Design for Smaller Screens */
     .container {
         width: 95%; /* Slightly wider container for smaller screens */
@@ -1348,6 +1356,7 @@ form button .ri-mail-send-line {
     margin-right: 200px;
     display: flex;
 }
+
 
 /* -----------------------------------
    Notch Adjustments for iPhone X and Similar Devices
