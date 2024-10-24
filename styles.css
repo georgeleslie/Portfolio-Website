@@ -539,7 +539,7 @@ p {
 .contactmain {
     width: 100%;
     padding: 50px 0;
-    background: var(--bg-color); /* Use the theme background */
+    background: black;
 }
 
 /* Contact Section Styles */
@@ -559,7 +559,7 @@ p {
     align-items: center;
     justify-content: center;
     width: 90%;
-    max-width: 900px; /* Prevent form from being too wide */
+    max-width: 900px;
     margin: auto;
 }
 
@@ -574,20 +574,16 @@ p {
 
 /* Contact Form Styling */
 .contact-form {
-    width: 100%; /* Full width within the container */
-    background: #222327; /* Dark background for the form */
+    width: 100%;
+    background: #222327;
     padding: 25px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-.contactmain {
-    background-color: #000
-    
-    ;
-}
+
 /* Form Group Styling */
 .form-group {
-    width: 100%; /* Full width for each form group */
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -595,7 +591,8 @@ p {
 .contact-form label {
     color: #00FFD5;
     display: block;
-    text-align: left; /* Align labels to the left */
+    text-align: left;
+    padding-left: 10px;
     margin-bottom: 8px;
     font-weight: 500;
 }
@@ -606,10 +603,11 @@ p {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    border: 1px solid #444; /* Slightly darker border for contrast */
+    border: 1px solid #444;
     border-radius: 6px;
-    background: #333;
-    color: #fff; /* Text color inside inputs */
+    background: #fff;
+    color: #000;
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 /* Consistent Height for Inputs */
@@ -617,28 +615,51 @@ p {
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
 .contact-form input[type="number"] {
-    height: 45px; /* Uniform height for all text inputs */
+    height: 45px;
 }
 
-/* Input Placeholder Color */
+/* Input Placeholder Styling */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #aaa; /* Lighter color for placeholders */
+    color: #888;
+    opacity: 0.8;
+}
+.contact-form input[type="email"] {
+    width: 100%; /* Let it fill the width of the container */
+    max-width: none; /* Remove fixed width limitation */
+    padding: 12px; /* Ensure padding matches other inputs */
+    text-align: left; /* Align text inside input to the left */
+}
+
+/* Placeholder Specific Styling */
+.contact-form input[type="email"]::placeholder {
+    text-align: left; /* Align placeholder text to the left */
+    color: #aaa; /* Optional: Add lighter color for placeholder text */
+}
+
+/* Fix Padding in Inputs */
+.contact-form input,
+.contact-form textarea {
+    padding: 0 12px; /* Padding left and right to keep uniform spacing */
 }
 
 /* Form Button Styling */
 .contact-form .btn {
-    width: 100%; /* Full width for the button */
+    margin-left: 300px;
+    width: 100%; /* Full width */
+    max-width: 250px; /* Adjust width as needed */
     padding: 15px;
     font-size: 1.1rem;
-    background-color: #00FFD5;
-    color: #000;
+    background-color: var(--bg-color);
+    color: var(--main-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-weight: bold;
     text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+    display: inline-block; /* Ensure the button takes only its content width */
 }
 
 /* Button Hover Effects */
@@ -652,6 +673,8 @@ p {
     outline: 2px solid #00FFD5;
     outline-offset: 2px;
 }
+
+
 /*contcact form above*/
 /*contcact form above*/
 /*contcact form above*/
@@ -902,6 +925,19 @@ form button .ri-mail-send-line {
     cursor: pointer;
 }
 
+.footer-card {
+    background: #2a2a2a; /* Set background color for the card */
+    border-radius: 12px; /* Rounded corners for the card */
+    padding: 20px; /* Space inside the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for 3D effect */
+    margin: 20px; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increase shadow depth on hover */
+}
 /* Copyright Section */
 .copyright {
     text-align: center;
