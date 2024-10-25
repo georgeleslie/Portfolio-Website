@@ -635,11 +635,7 @@ p {
     width: 100%; /* Let it fill the width of the container */
     max-width: none; /* Remove fixed width limitation */
     padding: 12px; /* Ensure padding matches other inputs */
-}
-
-/* Input Specific Placeholder Fix for Alignment */
-.contact-form input[type="email"]::placeholder {
-    text-align: left; /* Align placeholder text to the left */
+    text-align: left;
 }
 
 /* Fix Padding in Inputs */
@@ -661,7 +657,6 @@ p {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-weight: bold;
-    text-align: center;
     white-space: nowrap; /* Prevents text wrapping */
     display: inline-block; /* Ensure the button takes only its content width */
 }

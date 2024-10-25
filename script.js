@@ -35,9 +35,45 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
-// Handle form submission for a quote form
-document.getElementById('quoteForm').addEventListener('submit', function (e) {
+// Handle form submission for the quote form
+document.getElementById('quoteForm').addEventListener('submit', async function (e) {
     e.preventDefault();
-    alert('Form submitted!');
-    // Here you can add code to send form data to your server
+
+    // Collect form data (matching field IDs from HTML)
+    const formData = {
+        fullName: document.getElementById('fullName').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        location: document.getElementById('location').value.trim(),
+        notes: document.getElementById('notes').value.trim()
+    };
+
+    // Validate fields (can be expanded as needed)
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.location || !formData.notes) {
+        alert('Please fill out all required fields.');
+        return;
+    }
+
+    try {
+        // Send a POST request to your server
+        const response = await fetch('/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        // Handle server response
+        if (response.ok) {
+            alert('Your quote request was sent successfully!');
+            document.getElementById('quoteForm').reset(); // Reset form fields
+        } else {
+            const errorMessage = await response.text();
+            alert(`There was an error: ${errorMessage}`);
+        }
+    } catch (error) {
+        alert('An unexpected error occurred. Please try again later.');
+        console.error('Error:', error);
+    }
 });
