@@ -20,16 +20,19 @@
     <meta property="og:url" content="https://www.gdleslie.com">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#00FFD5">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Myportfolio" />
+    <meta name="mobile-web-app-capable" content="yes">
+
 
     <!-- Styles and Fonts -->
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/contact.css"
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="https://www.gdleslie.com/favicon.ico" type="image/x-icon">
@@ -37,9 +40,8 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Myportfolio" />
     <link rel="manifest" href="/images/site.webmanifest" />
-
+   
     <script src="/script.js" defer></script>
     <title>George Leslie | Web Developer Portfolio</title>
 </head>
@@ -64,7 +66,6 @@
             <button class="btn"><a href="/pages/contact.html">Get In Touch</a></button>
         </div>
     </header>
-
 
 <!-- Contact Form -->
 <main class="contactmain">
@@ -108,13 +109,13 @@
 
 <footer>
     <div class="row">
-        <div class="col">
+        <div class="col footer-card">
             <img src="/images/favicon-32x32.png" alt="George Leslie Logo" class="favfooter">
             <h1>George Leslie</h1>
             <p>The Web Developer</p>
         </div>
 
-        <div class="col">
+        <div class="col footer-card">
             <div class="contact-container">
                 <h3>Contact Information <div class="underline"><span></span></div></h3>
                 <p>Phuket Office</p>
@@ -124,7 +125,7 @@
             </div>
         </div>
 
-        <div class="col">
+        <div class="col footer-card">
             <h3>Links <div class="underline"><span></span></div></h3>
             <ul class="footer-links">
                 <li><a href="#" class="footer-link">Home</a></li>
@@ -137,12 +138,12 @@
             </ul>
         </div>
 
-        <div class="col">
+        <div class="col footer-card">
             <h3>Newsletter <div class="underline"><span></span></div></h3>
             <form>
                 <div class="form-icon">
                 </div>
-                <input type="email" placeholder="Enter Your Email" required>
+                <input type="email" id="newsletter-email" name="newsletterEmail" placeholder="Enter Your Email" autocomplete="email" required>
                 <button type="submit"><i class="ri-send-plane-2-line"></i></button>
             </form>
         </div>
