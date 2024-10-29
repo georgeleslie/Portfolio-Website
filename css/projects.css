@@ -1,73 +1,211 @@
-.projects {
-    background-color: var(--bg-color);
-    padding-top: 100px; /* Adjust the value as needed */
-}
-h1 {
-text-align: center;
-font-size: 2rem;
-color: var(--main-color);
-text-decoration: underline;
-padding-bottom: 20px;
-}
-
-.project-card h2 {
-    font-size: 1.5rem;
-}
-
-/* General Styling for Project Section */
-.project-highlight {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 20px;
-    background: var(--bg-color);
+/* Projects Main Section - 1st Section Styles */
+.projectsmain {
+    padding: 50px 12%;
+    background: var(--bg-color); /* Background color for the 1st section */
     color: var(--text-color);
 }
 
-/* Main Heading */
-.project-highlight h1 {
-    font-size: 2rem;
-    color: #00FFD5; /* Accent color */
+/* Projects Heading */
+.projectsmain h1 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: var(--main-color); /* White text for better contrast */
     text-align: center;
-    margin-bottom: 40px;
+    animation: fadeIn 1s ease forwards;
 }
 
-/* Subheadings */
-.project-highlight h2 {
-    font-size: 1.5rem;
-    margin-top: 30px;
-    color: #00FFD5;
-    border-bottom: 2px solid #00FFD5;
-    padding-bottom: 8px;
+/* Project Cards Container */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Paragraph Styling */
-.project-highlight p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 20px 0;
-    text-align: justify;
+/* Individual Project Card - 1st Section */
+.project-card {
+    background: black; /* Black cards */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+    width: 100%; /* Adjust width to fit your layout */
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
 }
 
-/* Feature List */
+/* Project Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px);
+    background: black; /* Slightly lighter black on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--main-color);
+}
+
+/* Project Card Heading */
+.project-card h2 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+/* Project Card Paragraph */
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Feature List in Project Cards */
 .feature-list {
+    padding: 0;
+    margin: 0;
     list-style-type: none;
-    padding-left: 0;
-    margin-top: 15px;
 }
 
+/* Feature List Item */
 .feature-list li {
-    background: #333;
-    padding: 15px 20px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    transition: background 0.3s ease;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
 }
 
-.feature-list li:hover {
-    background: #00c4a6; /* Slight hover effect */
+/* Feature List Item Strong */
+.feature-list li strong {
+    color: var(--main-color); /* Emphasize feature labels */
 }
 
-.feature-list strong {
-    color: #00FFD5; /* Highlight key features */
+
+
+/* Project Highlight Section */
+.project-highlight {
+    padding: 50px 12%;
+    background: black; /* Black background for the 2nd section */
+    color: var(--text-color);
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Project Highlight Heading */
+.project-highlight h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--main-color);
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Project Details Cards in the 2nd Section */
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Each Detail Section Inside the Card */
+.detail-section {
+    padding: 20px;
+    background: var(--bg-color); /* Background color for the sections in the 2nd section */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+/* Detail Section Hover Effect */
+.detail-section:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect */
+    background: var(--bg-color); /* Maintain black background on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 8px 16px var(--main-color); /* Apply the same shadow effect */
+}
+
+/* Detail Section Subheadings */
+.detail-section h2 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+/* Paragraphs in Detail Section */
+.detail-section p, .detail-section ul {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Feature List Adjustments */
+.feature-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Feature List Items */
+.feature-list li {
+    padding: 10px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Feature List Items Emphasis */
+.feature-list li strong {
+    color: var(--main-color); /* Emphasize key features */
+}
+
+@media (max-width: 768px) {
+    /* General Section Padding for Mobile */
+    .project-highlight {
+        padding: 20px 5%; /* Reduced padding on smaller screens */
+    }
+
+    /* Mobile Project Details Flex Layout */
+    .project-details {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Smaller gap between sections */
+    }
+
+    /* Mobile Individual Detail Sections */
+    .detail-section {
+        padding: 15px; /* Reduced padding for better fit on mobile */
+        border-radius: 8px; /* Slightly smaller border radius */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Softer shadow on mobile */
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Faster transitions */
+    }
+
+    /* Mobile Detail Section Hover Effect */
+    .detail-section:hover {
+        transform: none; /* No lifting effect on mobile to avoid accidental touches */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow to indicate focus */
+    }
+
+    /* Mobile Headings */
+    .project-highlight h1 {
+        font-size: 2rem; /* Smaller font size for headings */
+        margin-bottom: 20px;
+    }
+
+    .detail-section h2 {
+        font-size: 1.5rem; /* Smaller font size for subheadings */
+        margin-bottom: 10px;
+    }
+
+    /* Mobile Paragraphs and Lists */
+    .detail-section p, .detail-section ul {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    /* Mobile Feature List Items */
+    .feature-list li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        line-height: 1.4;
+    }
 }
