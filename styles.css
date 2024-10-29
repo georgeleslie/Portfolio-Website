@@ -436,16 +436,6 @@ h2 {
     text-align: center; 
     animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
 }
-.h2-container {
-    position: relative;
-    display: inline-block; /* Keep width tight to the text */
-    margin-bottom: 40px; /* Space below each heading */
-}
-
-.h2-container h2 {
-    margin: 0;
-    padding-bottom: 15px; /* Space between the heading and the underline */
-}
 
 /* Underline Styling */
 .underline {
