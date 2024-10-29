@@ -436,12 +436,47 @@ h2 {
     text-align: center; 
     animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
 }
+.h2-container {
+    position: relative;
+    display: inline-block; /* Keep width tight to the text */
+    margin-bottom: 40px; /* Space below each heading */
+}
+
+.h2-container h2 {
+    margin: 0;
+    padding-bottom: 15px; /* Space between the heading and the underline */
+}
+
+/* Underline Styling */
+.underline {
+    width: 100%; /* Matches width of the heading */
+    height: 3px; /* Thickness of the underline */
+    background: #767676; /* Base underline color */
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the container */
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 50px; /* Length of the animated accent */
+    height: 100%; /* Same height as the underline */
+    background: var(--main-color); /* Accent color for the animated part */
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0; /* Start from the beginning of the underline */
+    animation: moving 2s linear infinite;
+}
+
 
 h3 {
     text-align: center;
     margin-right: 40px;
     color: var(--main-color);
 }
+
 
 h4 {
     color: var(--main-color);
