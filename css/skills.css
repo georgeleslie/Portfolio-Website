@@ -1,0 +1,73 @@
+h1{
+    padding-top: 50px;
+}
+/* Skills Section General Styling */
+.skills {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Main Heading for Skills Section */
+.skills h1 {
+    font-size: 2.5rem;
+    color: #00FFD5; /* Accent color */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Skill Category Heading */
+.skills h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #00FFD5;
+    border-bottom: 2px solid #00FFD5;
+    padding-bottom: 8px;
+}
+
+/* Skill Category Container */
+.skill-category {
+    margin-bottom: 30px;
+}
+
+/* Skill List Styling */
+.skill-category ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+/* Skill List Items */
+.skill-category li {
+    font-size: 1.1rem;
+    background: #333;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Skill List Item Hover Effect */
+.skill-category li:hover {
+    background: #00c4a6; /* Slight hover effect */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Responsive Styling for Skills Section */
+@media (max-width: 768px) {
+    .skills h1 {
+        font-size: 2rem;
+    }
+
+    .skills h2 {
+        font-size: 1.6rem;
+    }
+
+    .skill-category li {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+}

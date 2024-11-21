@@ -1,0 +1,58 @@
+.aboutmain {
+    margin-top: 50px;
+}
+/* General Paragraph Styling */
+p {
+    color: var(--text-color); /* Matches the website's primary text color */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Heading Styles */
+h4 {
+    font-size: 1.5rem;
+    color: #00FFD5; /* Main accent color */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00FFD5; /* Add an accent line under headings */
+    padding-bottom: 5px;
+}
+
+/* Skills List Styling */
+.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.skills-list li {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background: #00c4a6; /* Slight hover effect */
+}
+
+/* Hobbies Section Styling */
+h4 + p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Call-to-Action Styling */
+h4:last-of-type {
+    margin-top: 40px;
+}
+
+h4:last-of-type + p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}

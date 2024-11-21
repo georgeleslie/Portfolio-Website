@@ -1,0 +1,91 @@
+/* Blog Section Styling */
+#blog {
+  padding: 50px 20px;
+  background-color: #222327; /* Match your existing dark color scheme */
+  color: #fff; /* Text color */
+  text-align: center;
+}
+
+/* Blog Heading */
+#blog h2 {
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Blog Intro Paragraph */
+#blog > p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Blog Card Container */
+.blog-card {
+  background: #000000;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Blog Card Heading */
+.blog-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--main-color);
+}
+
+/* Sub-heading inside the Blog Card */
+.blog-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #00ffd5;
+}
+
+/* Blog Card Paragraphs */
+.blog-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #blog {
+      padding: 30px 15px;
+  }
+  #blog h2 {
+      font-size: 2rem;
+  }
+  .blog-card {
+      padding: 15px;
+      margin: 15px auto;
+  }
+  .blog-card h3 {
+      font-size: 1.5rem;
+  }
+  .blog-card h4 {
+      font-size: 1.2rem;
+  }
+  .blog-card p {
+      font-size: 0.9rem;
+  }
+}
