@@ -282,6 +282,10 @@ header {
 /*dont touch above*/
 /*dont touch above*/
 
+.hero {
+    margin-top: 70px;
+}
+
 /* Section Picture Container */
 .section_pic-container {
     flex: 1 1 30%;
@@ -296,6 +300,8 @@ header {
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+
 /* Flexbox container for hero buttons */
 .hero-content {
     display: flex;
